@@ -11,4 +11,4 @@ echo ... rest of file ...
 cd TMP
 move *.* ..
 cd ..
-START Botitlauncher.exe
+START Botit.exe
