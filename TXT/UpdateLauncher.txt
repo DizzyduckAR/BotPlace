@@ -1,4 +1,4 @@
 *BotIt Launcher*
 0.2
 https://github.com/DizzyduckAR/BotIt/raw/master/BotIT.zip
-https://raw.githubusercontent.com/DizzyduckAR/BotIt/master/Updater.bat
+https://raw.githubusercontent.com/DizzyduckAR/BotIt/master/Update.bat
