@@ -3,4 +3,18 @@
 https://www.patreon.com/AutoMirror
 https://youtu.be/jsj1hOz9JE4
 https://www.patreon.com/file?h=32220666&i=4826543
-https://raw.githubusercontent.com/DizzyduckAR/Bot-It-Pokemon-masters/master/Update.txt
+https://github.com/DizzyduckAR/BotIt/raw/master/TXT/UpdateBots.txt
+
+*DigimonReA*
+0.4.6
+https://www.patreon.com/AutoMirror
+
+1
+https://github.com/DizzyduckAR/BotIt/raw/master/TXT/UpdateBots.txt
+
+*Summoners War*
+0.5.9
+https://www.patreon.com/AutoMirror
+https://youtu.be/jsj1hOz9JE4
+https://www.patreon.com/file?h=32220666&i=4826543
+https://github.com/DizzyduckAR/BotIt/raw/master/TXT/UpdateBots.txt
