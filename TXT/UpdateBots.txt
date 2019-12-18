@@ -1,8 +1,8 @@
 *pokemon masters*
-0.5.9
+0.6.0
 https://www.patreon.com/AutoMirror
 https://youtu.be/jsj1hOz9JE4
-https://github.com/DizzyduckAR/BotIt/raw/master/BotIT%20Games/BotIt%20Pokemon%20masters%200.5.9.zip
+https://github.com/DizzyduckAR/BotIt/raw/master/BotIT%20Games/BotIt%20Pokemon%20masters%200.6.zip
 https://github.com/DizzyduckAR/BotIt/raw/master/TXT/UpdateBots.txt
 
 *DigimonReA*
