@@ -13,8 +13,8 @@ https://github.com/DizzyduckAR/BotIt/raw/master/BotIT%20Games/DigimonRe%200.4.7.
 https://github.com/DizzyduckAR/BotIt/raw/master/TXT/UpdateBots.txt
 
 *Summoners War*
-0.3
+0.3.1
 https://www.patreon.com/AutoMirror
-
-https://github.com/DizzyduckAR/BotIt/raw/master/BotIT%20Games/BotIt%20Pokemon%20masters%200.5.9.zip
+https://youtu.be/NVou1OWsGxQ
+https://github.com/DizzyduckAR/BotIt/raw/master/BotIT%20Games/BotIt%20Summoner%20Wars%20V0.3.1.zip
 https://github.com/DizzyduckAR/BotIt/raw/master/TXT/UpdateBots.txt
