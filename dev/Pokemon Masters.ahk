@@ -1,4 +1,4 @@
-﻿; This script was created by Arazu
+; This script was created by Arazu
 ; https://discord.gg/CUgnVpk
 ; https://github.com/DizzyduckAR/AutoMirror/
 ; Modded By Sefer#3011
@@ -34,7 +34,7 @@ ImageSearch_BotitBGS(Title, ImgFileName, ByRef truex, ByRef truey)
 	
 	Gdip_DrawImage(BotitG, pBitmapBotitHay, 0, 0, Width, Height, 0, 0, Width, Height, Matrix)
 	
-	result:= Gdip_ImageSearch(pBitmap,pBitmapBotitN,List,0,0,0,0,45,0,2,1)
+	result:= Gdip_ImageSearch(pBitmap,pBitmapBotitN,List,0,0,0,0,55,0,1,1)
 	canterx:= Gdip_GetImageWidth( pBitmapBotitN )
 	cantery:= Gdip_GetImageHeight( pBitmapBotitN ) 
 	
@@ -42,6 +42,8 @@ ImageSearch_BotitBGS(Title, ImgFileName, ByRef truex, ByRef truey)
 	Gdip_DeleteGraphics(BotitG)
 	Gdip_DisposeImage(pBitmapBotitHay)
 	Gdip_DisposeImage(pBitmapBotitN)
+	pBitmapBotitHay :=""
+	pBitmapBotitN :=""
 	Gdip_Shutdown(pToken)
 	
 	if (result) 
@@ -77,7 +79,7 @@ ImageSearch_BotitBGS(Title, ImgFileName, ByRef truex, ByRef truey)
 		{
 			truex:= truex - Xrnd
 			truey:= truey + Yrnd
-		}
+		}		
 		;global imagetrackX:=truex
 		;global imagetrackY:=truey
 		
@@ -112,7 +114,7 @@ ImageSearch_BotitBGSO(Title, ImgFileName, ByRef truex, ByRef truey)
 		MsgBox, Missing Gdip error! 
 		ExitApp
 	}
-	
+	 
 	QPX( True )
 	
 	pBitmapBotitHay := Gdip_BitmapFromHWND(hwnd := WinExist("" targetwindow ""  ))
@@ -133,6 +135,8 @@ ImageSearch_BotitBGSO(Title, ImgFileName, ByRef truex, ByRef truey)
 	Gdip_DeleteGraphics(BotitG)
 	Gdip_DisposeImage(pBitmapBotitHay)
 	Gdip_DisposeImage(pBitmapBotitN)
+	pBitmapBotitHay :=""
+	pBitmapBotitN :=""
 	Gdip_Shutdown(pToken)
 	
 	if (result) 
@@ -192,6 +196,8 @@ ImageSearch_BotitMinisleep(Title, ImgFileName, ByRef truex, ByRef truey)
 	Gdip_DeleteGraphics(BotitG)
 	Gdip_DisposeImage(pBitmapBotitHay)
 	Gdip_DisposeImage(pBitmapBotitN)
+	pBitmapBotitHay :=""
+	pBitmapBotitN :=""
 	Gdip_Shutdown(pToken)
 	
 	if (result) 
@@ -258,6 +264,8 @@ ImageSearch_BotitBGSleep(Title, ImgFileName, ByRef truex, ByRef truey)
 	Gdip_DeleteGraphics(BotitG)
 	Gdip_DisposeImage(pBitmapBotitHay)
 	Gdip_DisposeImage(pBitmapBotitN)
+	pBitmapBotitHay :=""
+	pBitmapBotitN :=""
 	Gdip_Shutdown(pToken)
 	
 	if (result) 
@@ -311,6 +319,7 @@ ImageSearch_BGSNOCLICK(Title, ImgFileName, ByRef truex, ByRef truey)
 	
 	BotitG := Gdip_GraphicsFromImage(pBitmap)
 	Matrix = 0.299|0.299|0.299|0|0|0.587|0.587|0.587|0|0|0.114|0.114|0.114|0|0|0|0|0|1|0|0|0|0|0|1
+
 	Gdip_DrawImage(BotitG, pBitmapBotitHay, 0, 0, Width, Height, 0, 0, Width, Height, Matrix)
 	
 	result:= Gdip_ImageSearch(pBitmap,pBitmapBotitN,List,0,0,0,0,55,0,2,1)
@@ -321,6 +330,8 @@ ImageSearch_BGSNOCLICK(Title, ImgFileName, ByRef truex, ByRef truey)
 	Gdip_DeleteGraphics(BotitG)
 	Gdip_DisposeImage(pBitmapBotitHay)
 	Gdip_DisposeImage(pBitmapBotitN)
+	pBitmapBotitHay :=""
+	pBitmapBotitN :=""
 	Gdip_Shutdown(pToken)
 	
 	if (result) 
@@ -382,6 +393,8 @@ ImageSearch_BotitBGSMulti(Title, ImgFileName, ByRef truex, ByRef truey)
 	Gdip_DeleteGraphics(BotitG)
 	Gdip_DisposeImage(pBitmapBotitHay)
 	Gdip_DisposeImage(pBitmapBotitN)
+	pBitmapBotitHay :=""
+	pBitmapBotitN :=""
 	Gdip_Shutdown(pToken)
 	
 	if (result) 
@@ -453,6 +466,8 @@ ImageSearch_BotitBGSTest(Title, ImgFileName, ByRef truex, ByRef truey)
 	Gdip_DeleteGraphics(BotitG)
 	Gdip_DisposeImage(pBitmapBotitHay)
 	Gdip_DisposeImage(pBitmapBotitN)
+	pBitmapBotitHay :=""
+	pBitmapBotitN :=""
 	Gdip_Shutdown(pToken)
 	
 	if (result) 
@@ -7710,27 +7725,24 @@ Botit65()
 
 Botit70()
 {
-	IfExist, img\Botit70.png
-	{
-		Exist:=ImageSearch_BGSNOCLICK(targetwindow, "img\Botit70.png", ByRef truex, ByRef truey)
-		if Exist
-		{
-			
-			sleep,1000
-			Exist:=ImageSearch_BGSNOCLICK(targetwindow, "img\Botit60.png", ByRef truex, ByRef truey)
-			If Not Exist
-			{
-				
-				Batit5 = adb -s %targetwindow% shell input swipe 200 1000 200 400 200
-				FileDelete temp.bat
-				FileAppend %Batit5% , temp.bat
-				Sleep, 1000
-				RunWait temp.bat,, Hide
-				Sleep, 1000
-				Sleep, 1000
-			}
-		}
-	}
+    IfExist, img\Botit70.png
+    {
+        Exist:=ImageSearch_BGSNOCLICK(targetwindow, "img\Botit70.png", ByRef truex, ByRef truey)
+        if Exist
+        {
+            sleep,1000
+            Exist:=ImageSearch_BGSNOCLICK(targetwindow, "img\Botit60.png", ByRef truex, ByRef truey)
+            If Not Exist
+            {
+                Batit5 = adb -s %targetwindow% shell input swipe 200 1000 200 400 200
+                FileDelete temp.bat
+                FileAppend %Batit5% , temp.bat
+                Sleep, 1000
+                RunWait temp.bat,, Hide
+                Sleep, 2000
+            }
+        }
+    }
 }
 
 Botit16()
@@ -7795,9 +7807,6 @@ BotItTest()
 		{
 			MsgBox 262144 , not Exist
 		}
-		
-
-		
 		sleep, 5000
 	}
 }
@@ -7844,7 +7853,7 @@ Gui Add, Button, x223 y15 w30 h20, Grab
 Gui Add, Button, x255 y15 w30 h20, Size
 
 Gui Font, Bold
-;Gui Add, Text, x160 y40 w63 h20 +0x200 , Resolution
+Gui Add, Text, x160 y40 w63 h20 +0x200 , Resolution
 Gui Font
 Gui Add, DropDownList, x224 y40 w60 vResW gmenuItm2, 408|300
 
@@ -7874,12 +7883,18 @@ Gui Add, Edit, x16 y160 w40 h20 disabled +Number vrcycles
 Gui Add, Text, cBlack x100 y163 w50 h20 +BackgroundTrans vccycle,
 
 Gui Font, Bold
-Gui Add, Text, x162 y136 h20 +0x200, Random Event 1 to 3
+Gui Add, Text, x162 y136 h20 +0x200, Event Mode
+Gui Font
+Gui Add, CheckBox, x162 y155 w50 h23 vSingleM gCheck, Single
+Gui Add, CheckBox, x215 y155 w50 h23 checked vCoopM gCheck, COOP
+
+Gui Font, Bold
+Gui Add, Text, x162 y184 h20 +0x200, Random Event 1 to 3
 Gui Font
 EventA:=1
 EventB:=3
-Gui, Add, Edit, x162 y160 w30 h20 VEventA gsubmit_all, %EventA%
-Gui, Add, Edit, x202 y160 w30 h20 VEventB gsubmit_all, %EventB%
+Gui, Add, Edit, x162 y208 w30 h20 VEventA gsubmit_all, %EventA%
+Gui, Add, Edit, x202 y208 w30 h20 VEventB gsubmit_all, %EventB%
 
 Gui Font, Bold
 Gui Add, Text, x16 y184 w38 h20 +0x200 , Status
@@ -7911,6 +7926,14 @@ Gui Add, Picture, x240 y248 w32 h32, 2.png
 ;Gui, Add, Edit, x110 y235 w30 h20 VDockercounter gsubmit_all, %Dockercounter%
 Return
 
+Check:
+Gui, Submit, Nohide
+If (A_GuiControl="SingleM")
+	GuiControl,,CoopM,0
+Else
+	GuiControl,,SingleM,0
+return
+
 menuItm2:
 ;global ResW:=ResW
 Gui, Submit, NoHide
@@ -7922,12 +7945,10 @@ if (menuChoice = "Random Stage")
 {
 	guicontrol,enable,rcycles
 }
-
 else
 {
 	guicontrol,disabled,rcycles	
 }
-
 return
 
 ButtonStart:
@@ -7960,33 +7981,27 @@ If (menuChoice = "Level-Up")
 		Sleep,%SleepAmount%
 		Botit2()
 		GuiControl, 1:, MyProgress,%MyProgress%
-		
-		
+
 		GuiControl,1:,Botittext,Botit3
 		GuiControl,1:,Botittext5,Level-Up
 		Sleep,%SleepAmount%
-		Sleep,%SleepAmount%
 		Botit3()
-		GuiControl, 1:, MyProgress,%MyProgress%
-		
+		GuiControl, 1:, MyProgress,%MyProgress%		
 		
 		GuiControl,1:,Botittext,Botit70
 		Sleep,%SleepAmount%
 		Botit70()
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
-		
-		
 		GuiControl,1:,Botittext,Botit3
 		GuiControl,1:,Botittext5,Level-Up
-		Sleep,%SleepAmount%
 		Sleep,%SleepAmount%
 		Botit3()
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
 		Sleep,%SleepAmount%
 		Sleep,%SleepAmount%
-		
+
 		If (Gamechoice = "Normal")	
 		{
 			GuiControl,1:,Botittext,Botit9
@@ -8031,7 +8046,7 @@ If (menuChoice = "Level-Up")
 		{
 			Random, diffpick, 1, 5
 			;Msgbox, %diffpick%
-			
+
 			If ( diffpick = 1)
 			{
 				GuiControl,1:,Botittext,Botit9
@@ -8114,6 +8129,8 @@ If (menuChoice = "Level-Up")
 		Gdip_DeleteGraphics(BotitG)
 		Gdip_DisposeImage(pBitmapBotitHay)
 		Gdip_DisposeImage(pBitmapBotitN)
+		pBitmapBotitHay :=""
+		pBitmapBotitN :=""
 		Gdip_Shutdown(pToken)
 	}
 }
@@ -8125,17 +8142,17 @@ else If (menuChoice = "Strike")
 	Loop
 	{
 		Random, SleepAmount, %SleepAmountA%, %SleepAmountB%
-		
+
 		GuiControl,1:,Botittext,Botit1
 		Sleep, %SleepAmount%
 		Botit1()
 		GuiControl, 1:, MyProgress,%MyProgress%
-		
+
 		GuiControl,1:,Botittext,Botit2
-		Sleep,%SleepAmount%
+		Sleep, %SleepAmount%
 		Botit2()
 		GuiControl, 1:, MyProgress,%MyProgress%
-		
+
 		GuiControl,1:,Botittext,Botit4
 		GuiControl,1:,Botittext5,Strike
 		Sleep, %SleepAmount%
@@ -8145,18 +8162,17 @@ else If (menuChoice = "Strike")
 		GuiControl,1:,Botittext,Botit70
 		Sleep,%SleepAmount%
 		Botit70()
-		GuiControl, 1:, MyProgress,%MyProgress%
-		
+		GuiControl, 1:, MyProgress,%MyProgress%	
 		
 		GuiControl,1:,Botittext,Botit4
 		GuiControl,1:,Botittext5,Strike
 		Sleep, %SleepAmount%
 		Botit4()
 		GuiControl, 1:, MyProgress,%MyProgress%
-		
+
 		Sleep,%SleepAmount%
 		Sleep,%SleepAmount%
-		
+
 		If (Gamechoice = "Normal")	
 		{
 			GuiControl,1:,Botittext,Botit9
@@ -8201,7 +8217,7 @@ else If (menuChoice = "Strike")
 		{
 			Random, diffpick, 1, 5
 			;Msgbox, %diffpick%
-			
+
 			If ( diffpick = 1)
 			{
 				GuiControl,1:,Botittext,Botit9
@@ -8274,12 +8290,12 @@ else If (menuChoice = "Strike")
 		Sleep, %SleepAmount%
 		Botit13()
 		GuiControl, 1:, MyProgress,%MyProgress%
-		
+
 		GuiControl,1:,Botittext,Botit21
 		Sleep, %SleepAmount%
 		Botit21()
 		GuiControl, 1:, MyProgress,%MyProgress%
-		
+
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
 		Sleep, %SleepAmount%
@@ -8288,6 +8304,8 @@ else If (menuChoice = "Strike")
 		Gdip_DeleteGraphics(BotitG)
 		Gdip_DisposeImage(pBitmapBotitHay)
 		Gdip_DisposeImage(pBitmapBotitN)
+		pBitmapBotitHay :=""
+		pBitmapBotitN :=""
 		Gdip_Shutdown(pToken)
 	}	
 }	
@@ -8303,12 +8321,12 @@ else If (menuChoice = "Tech")
 		Sleep, %SleepAmount%
 		Botit1()
 		GuiControl, 1:, MyProgress,%MyProgress%
-		
+
 		GuiControl,1:,Botittext,Botit2
-		Sleep,%SleepAmount%
+		Sleep, %SleepAmount%
 		Botit2()
 		GuiControl, 1:, MyProgress,%MyProgress%
-		
+
 		GuiControl,1:,Botittext,Botit5
 		GuiControl,1:,Botittext5,Tech
 		Sleep, %SleepAmount%
@@ -8328,7 +8346,7 @@ else If (menuChoice = "Tech")
 		
 		Sleep,%SleepAmount%
 		Sleep,%SleepAmount%
-		
+
 		If (Gamechoice = "Normal")	
 		{
 			GuiControl,1:,Botittext,Botit9
@@ -8413,7 +8431,7 @@ else If (menuChoice = "Tech")
 				GuiControl, 1:, MyProgress,%MyProgress%
 			}
 		}
-		
+
 		sleep, 1450
 		GuiControl,1:,Botittext,Botit10
 		Sleep, %SleepAmount%
@@ -8445,7 +8463,7 @@ else If (menuChoice = "Tech")
 		Sleep, %SleepAmount%
 		Botit13()
 		GuiControl, 1:, MyProgress,%MyProgress%
-		
+
 		GuiControl,1:,Botittext,Botit21
 		Sleep, %SleepAmount%
 		Botit21()
@@ -8455,6 +8473,8 @@ else If (menuChoice = "Tech")
 		Gdip_DeleteGraphics(BotitG)
 		Gdip_DisposeImage(pBitmapBotitHay)
 		Gdip_DisposeImage(pBitmapBotitN)
+		pBitmapBotitHay :=""
+		pBitmapBotitN :=""
 		Gdip_Shutdown(pToken)
 	}
 }
@@ -8470,26 +8490,32 @@ else If (menuChoice = "Support")
 		Sleep, %SleepAmount%
 		Botit1()
 		GuiControl, 1:, MyProgress,%MyProgress%
-		
+
 		GuiControl,1:,Botittext,Botit2
-		Sleep,%SleepAmount%
+		Sleep, %SleepAmount%
 		Botit2()
 		GuiControl, 1:, MyProgress,%MyProgress%
-		
-		GuiControl,1:,Botittext,Botit70
-		Sleep,%SleepAmount%
-		Botit70()
-		GuiControl, 1:, MyProgress,%MyProgress%
-		
+
 		GuiControl,1:,Botittext,Botit6
 		GuiControl,1:,Botittext5,Support
 		Sleep, %SleepAmount%
 		Botit6()
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
+		GuiControl,1:,Botittext,Botit70
+		Sleep,%SleepAmount%
+		Botit70()
+		GuiControl, 1:, MyProgress,%MyProgress%
+
+		GuiControl,1:,Botittext,Botit6
+		GuiControl,1:,Botittext5,Support
+		Sleep, %SleepAmount%
+		Botit6()
+		GuiControl, 1:, MyProgress,%MyProgress%
+
 		Sleep,%SleepAmount%
 		Sleep,%SleepAmount%
-		
+
 		If (Gamechoice = "Normal")	
 		{
 			GuiControl,1:,Botittext,Botit9
@@ -8534,7 +8560,7 @@ else If (menuChoice = "Support")
 		{
 			Random, diffpick, 1, 5
 			;Msgbox, %diffpick%
-			
+
 			If ( diffpick = 1)
 			{
 				GuiControl,1:,Botittext,Botit9
@@ -8542,7 +8568,7 @@ else If (menuChoice = "Support")
 				Botit9()	
 				GuiControl, 1:, MyProgress,%MyProgress%
 			}
-			
+
 			else If ( diffpick = 2)
 			{
 				GuiControl,1:,Botittext,Botit8
@@ -8550,7 +8576,7 @@ else If (menuChoice = "Support")
 				Botit8()
 				GuiControl, 1:, MyProgress,%MyProgress%	
 			}
-			
+
 			else if ( diffpick  = 3)
 			{
 				GuiControl,1:,Botittext,Botit7
@@ -8575,7 +8601,7 @@ else If (menuChoice = "Support")
 				GuiControl, 1:, MyProgress,%MyProgress%
 			}
 		}
-		
+
 		sleep, 1450
 		GuiControl,1:,Botittext,Botit10
 		Sleep, %SleepAmount%
@@ -8607,7 +8633,7 @@ else If (menuChoice = "Support")
 		Sleep, %SleepAmount%
 		Botit13()
 		GuiControl, 1:, MyProgress,%MyProgress%
-		
+
 		GuiControl,1:,Botittext,Botit21
 		Sleep, %SleepAmount%
 		Botit21()
@@ -8617,6 +8643,8 @@ else If (menuChoice = "Support")
 		Gdip_DeleteGraphics(BotitG)
 		Gdip_DisposeImage(pBitmapBotitHay)
 		Gdip_DisposeImage(pBitmapBotitN)
+		pBitmapBotitHay :=""
+		pBitmapBotitN :=""
 		Gdip_Shutdown(pToken)
 	}
 }
@@ -8772,6 +8800,8 @@ else If (menuChoice = "Story COOP")
 		Gdip_DeleteGraphics(BotitG)
 		Gdip_DisposeImage(pBitmapBotitHay)
 		Gdip_DisposeImage(pBitmapBotitN)
+		pBitmapBotitHay :=""
+		pBitmapBotitN :=""
 		Gdip_Shutdown(pToken)
 	}
 }	
@@ -8786,7 +8816,7 @@ else If (menuChoice = "Random Stage")
 	
 	SetTimer,BotitRandomlist,10000
 	;Botitlist := "Botit1,Botit2,Botit3,Botit4,Botit5,Botit6,Botit7,Botit8,Botit9,Botit30,Botit10,Botit11,Botit16,Botit21,Botit22"
-	
+
 	;Loop , Parse, % Botitlist,`,
 	;{	
 	;	IfExist, img\%A_LoopField%.png
@@ -8833,12 +8863,12 @@ else If (menuChoice = "Random Stage")
 		Sleep, %SleepAmount%
 		Botit1()
 		GuiControl, 1:, MyProgress,%MyProgress%
-		
+
 		GuiControl,1:,Botittext,Botit2
-		Sleep,%SleepAmount%
+		Sleep, %SleepAmount%
 		Botit2()
 		GuiControl, 1:, MyProgress,%MyProgress%
-		
+
 		GuiControl,1:,Botittext,Botit70
 		Sleep,%SleepAmount%
 		Botit70()
@@ -8846,7 +8876,7 @@ else If (menuChoice = "Random Stage")
 		
 		Sleep, %SleepAmount%
 		Sleep, %SleepAmount%
-		
+
 		If (menuChoice = "Random Stage")	
 		{
 			If ( diffpick2 = 1)
@@ -8884,7 +8914,7 @@ else If (menuChoice = "Random Stage")
 		
 		Sleep,%SleepAmount%
 		Sleep,%SleepAmount%
-		
+
 		If (Gamechoice = "Normal")	
 		{
 			GuiControl,1:,Botittext,Botit9
@@ -9013,6 +9043,8 @@ else If (menuChoice = "Random Stage")
 		Gdip_DeleteGraphics(BotitG)
 		Gdip_DisposeImage(pBitmapBotitHay)
 		Gdip_DisposeImage(pBitmapBotitN)
+		pBitmapBotitHay :=""
+		pBitmapBotitN :=""
 		Gdip_Shutdown(pToken)
 	}	
 } 
@@ -9029,10 +9061,13 @@ else If (menuChoice = "Random Event")
 		Botit1()
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
-		GuiControl,1:,Botittext,Botit17
-		Sleep, %SleepAmount%
-		Botit17()
-		GuiControl, 1:, MyProgress,%MyProgress%
+		if CoopM = 1
+		{
+			GuiControl,1:,Botittext,Botit17
+			Sleep, %SleepAmount%
+			Botit17()
+			GuiControl, 1:, MyProgress,%MyProgress%			
+		}
 		
 		GuiControl,1:,Botittext,Botit26
 		Sleep, %SleepAmount%
@@ -9192,10 +9227,13 @@ else If (menuChoice = "Random Event")
 		Sleep, %SleepAmount%
 		Botit21()
 		GuiControl, 1:, MyProgress,%MyProgress%	
+
 		Gdip_DisposeImage(pBitmap)
 		Gdip_DeleteGraphics(BotitG)
 		Gdip_DisposeImage(pBitmapBotitHay)
 		Gdip_DisposeImage(pBitmapBotitN)
+		pBitmapBotitHay :=""
+		pBitmapBotitN :=""
 		Gdip_Shutdown(pToken)
 	}    
 } 
@@ -9321,6 +9359,8 @@ else if (menuChoice = "COOP Drag")
 		Gdip_DeleteGraphics(BotitG)
 		Gdip_DisposeImage(pBitmapBotitHay)
 		Gdip_DisposeImage(pBitmapBotitN)
+		pBitmapBotitHay :=""
+		pBitmapBotitN :=""
 		Gdip_Shutdown(pToken)
 	}
 }
@@ -9337,11 +9377,14 @@ else If (menuChoice = "Event 1")
 		Botit1()
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
-		GuiControl,1:,Botittext,Botit17
-		Sleep, %SleepAmount%
-		Botit17()
-		GuiControl, 1:, MyProgress,%MyProgress%
-		
+		if CoopM = 1
+		{
+			GuiControl,1:,Botittext,Botit17
+			Sleep, %SleepAmount%
+			Botit17()
+			GuiControl, 1:, MyProgress,%MyProgress%			
+		}
+
 		GuiControl,1:,Botittext,Botit26
 		Sleep, %SleepAmount%
 		Botit26()
@@ -9473,11 +9516,13 @@ else If (menuChoice = "Event 1")
 		Sleep, %SleepAmount%
 		Botit21()
 		GuiControl, 1:, MyProgress,%MyProgress%	
-		
+
 		Gdip_DisposeImage(pBitmap)
 		Gdip_DeleteGraphics(BotitG)
 		Gdip_DisposeImage(pBitmapBotitHay)
 		Gdip_DisposeImage(pBitmapBotitN)
+		pBitmapBotitHay :=""
+		pBitmapBotitN :=""
 		Gdip_Shutdown(pToken)
 	}    
 } 
@@ -9494,10 +9539,13 @@ else If (menuChoice = "Event 2")
 		Botit1()
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
-		GuiControl,1:,Botittext,Botit17
-		Sleep, %SleepAmount%
-		Botit17()
-		GuiControl, 1:, MyProgress,%MyProgress%
+		if CoopM = 1
+		{
+			GuiControl,1:,Botittext,Botit17
+			Sleep, %SleepAmount%
+			Botit17()
+			GuiControl, 1:, MyProgress,%MyProgress%			
+		}
 		
 		GuiControl,1:,Botittext,Botit26
 		Sleep, %SleepAmount%
@@ -9630,10 +9678,13 @@ else If (menuChoice = "Event 2")
 		Sleep, %SleepAmount%
 		Botit21()
 		GuiControl, 1:, MyProgress,%MyProgress%	
+
 		Gdip_DisposeImage(pBitmap)
 		Gdip_DeleteGraphics(BotitG)
 		Gdip_DisposeImage(pBitmapBotitHay)
 		Gdip_DisposeImage(pBitmapBotitN)
+		pBitmapBotitHay :=""
+		pBitmapBotitN :=""
 		Gdip_Shutdown(pToken)
 	}    
 } 
@@ -9650,10 +9701,13 @@ else If (menuChoice = "Event 3")
 		Botit1()
 		GuiControl, 1:, MyProgress,%MyProgress%
 		
-		GuiControl,1:,Botittext,Botit17
-		Sleep, %SleepAmount%
-		Botit17()
-		GuiControl, 1:, MyProgress,%MyProgress%
+		if CoopM = 1
+		{
+			GuiControl,1:,Botittext,Botit17
+			Sleep, %SleepAmount%
+			Botit17()
+			GuiControl, 1:, MyProgress,%MyProgress%			
+		}
 		
 		GuiControl,1:,Botittext,Botit26
 		Sleep, %SleepAmount%
@@ -9785,11 +9839,14 @@ else If (menuChoice = "Event 3")
 		GuiControl,1:,Botittext,Botit21
 		Sleep, %SleepAmount%
 		Botit21()
-		GuiControl, 1:, MyProgress,%MyProgress%	
+		GuiControl, 1:, MyProgress,%MyProgress%
+			
 		Gdip_DisposeImage(pBitmap)
 		Gdip_DeleteGraphics(BotitG)
 		Gdip_DisposeImage(pBitmapBotitHay)
 		Gdip_DisposeImage(pBitmapBotitN)
+		pBitmapBotitHay :=""
+		pBitmapBotitN :=""
 		Gdip_Shutdown(pToken)
 	}    
 } 
@@ -9959,8 +10016,6 @@ gui Destroy
 Gosub,ButtonInstaller
 return
 
-
-
 InstallerButtonInstaller1:
 file := A_ScriptDir "\Image installer\1.png"
 Gui, Margin, 20, 20
@@ -9973,7 +10028,6 @@ Gui Show, center ,Demo gif
 return
 
 ButtonSnap1:
-
 ScreenCapture(location:="clipboard")
 sleep, 500
 ;InputBox,Userbotit, Pick Number,Choose Botit Number to Save/Replace ,,250,150
@@ -10009,7 +10063,6 @@ Gui Show, center ,Demo Image
 return
 
 ButtonSnap2:
-
 ScreenCapture(location:="clipboard")
 sleep, 500
 ;InputBox,Userbotit, Pick Number,Choose Botit Number to Save/Replace ,,250,150
@@ -10029,7 +10082,6 @@ msgbox,,,Crop Fin,2
 return
 
 ButtonSnap16:
-
 ScreenCapture(location:="clipboard")
 sleep, 500
 ;InputBox,Userbotit, Pick Number,Choose Botit Number to Save/Replace ,,250,150
@@ -10049,7 +10101,6 @@ msgbox,,,Crop Fin,2
 return
 
 ButtonSnap17:
-
 ScreenCapture(location:="clipboard")
 sleep, 500
 ;InputBox,Userbotit, Pick Number,Choose Botit Number to Save/Replace ,,250,150
@@ -10069,7 +10120,6 @@ msgbox,,,Crop Fin,2
 return
 
 ButtonSnap26:
-
 ScreenCapture(location:="clipboard")
 sleep, 500
 ;InputBox,Userbotit, Pick Number,Choose Botit Number to Save/Replace ,,250,150
@@ -10106,7 +10156,6 @@ Gui Show, center ,Demo Image
 return
 
 ButtonSnap3:
-
 ScreenCapture(location:="clipboard")
 sleep, 500
 ;InputBox,Userbotit, Pick Number,Choose Botit Number to Save/Replace ,,250,150
@@ -10126,7 +10175,6 @@ msgbox,,,Crop Fin,2
 return
 
 ButtonSnap4:
-
 ScreenCapture(location:="clipboard")
 sleep, 500
 ;InputBox,Userbotit, Pick Number,Choose Botit Number to Save/Replace ,,250,150
@@ -10146,7 +10194,6 @@ msgbox,,,Crop Fin,2
 return
 
 ButtonSnap5:
-
 ScreenCapture(location:="clipboard")
 sleep, 500
 ;InputBox,Userbotit, Pick Number,Choose Botit Number to Save/Replace ,,250,150
@@ -10166,7 +10213,6 @@ msgbox,,,Crop Fin,2
 return
 
 ButtonSnap6:
-
 ScreenCapture(location:="clipboard")
 sleep, 500
 ;InputBox,Userbotit, Pick Number,Choose Botit Number to Save/Replace ,,250,150
@@ -10186,7 +10232,6 @@ msgbox,,,Crop Fin,2
 return
 
 ButtonSnap70:
-
 ScreenCapture(location:="clipboard")
 sleep, 500
 ;InputBox,Userbotit, Pick Number,Choose Botit Number to Save/Replace ,,250,150
@@ -10223,7 +10268,6 @@ Gui Show, center ,Demo Image
 return
 
 ButtonSnap7:
-
 ScreenCapture(location:="clipboard")
 sleep, 500
 ;InputBox,Userbotit, Pick Number,Choose Botit Number to Save/Replace ,,250,150
@@ -10243,7 +10287,6 @@ msgbox,,,Crop Fin,2
 return
 
 ButtonSnap8:
-
 ScreenCapture(location:="clipboard")
 sleep, 500
 ;InputBox,Userbotit, Pick Number,Choose Botit Number to Save/Replace ,,250,150
@@ -10263,7 +10306,6 @@ msgbox,,,Crop Fin,2
 return
 
 ButtonSnap9:
-
 ScreenCapture(location:="clipboard")
 sleep, 500
 ;InputBox,Userbotit, Pick Number,Choose Botit Number to Save/Replace ,,250,150
@@ -10283,7 +10325,6 @@ msgbox,,,Crop Fin,2
 return
 
 ButtonSnap30:
-
 ScreenCapture(location:="clipboard")
 sleep, 500
 ;InputBox,Userbotit, Pick Number,Choose Botit Number to Save/Replace ,,250,150
@@ -10303,7 +10344,6 @@ msgbox,,,Crop Fin,2
 return
 
 ButtonSnap60:
-
 ScreenCapture(location:="clipboard")
 sleep, 500
 ;InputBox,Userbotit, Pick Number,Choose Botit Number to Save/Replace ,,250,150
@@ -10336,7 +10376,6 @@ Gui Show, center ,Demo Image
 return
 
 ButtonSnap10:
-
 ScreenCapture(location:="clipboard")
 sleep, 500
 ;InputBox,Userbotit, Pick Number,Choose Botit Number to Save/Replace ,,250,150
@@ -10355,10 +10394,7 @@ msgbox,,,Crop Fin,2
 ;gui Destroy
 return
 
-
-
 ;****
-
 InstallerButtonInstaller6:
 file := A_ScriptDir "\Image installer\6.png"
 Gui, Margin, 20, 20
@@ -10371,7 +10407,6 @@ Gui Show, center ,Demo Image
 return
 
 ButtonSnap11:
-
 ScreenCapture(location:="clipboard")
 sleep, 500
 ;InputBox,Userbotit, Pick Number,Choose Botit Number to Save/Replace ,,250,150
@@ -10405,7 +10440,6 @@ Gui Show, center ,Demo Image
 return
 
 ButtonSnap12:
-
 ScreenCapture(location:="clipboard")
 sleep, 500
 ;InputBox,Userbotit, Pick Number,Choose Botit Number to Save/Replace ,,250,150
@@ -10425,7 +10459,6 @@ msgbox,,,Crop Fin,2
 return
 
 ButtonSnap14:
-
 ScreenCapture(location:="clipboard")
 sleep, 500
 ;InputBox,Userbotit, Pick Number,Choose Botit Number to Save/Replace ,,250,150
@@ -10444,8 +10477,6 @@ msgbox,,,Crop Fin,2
 ;gui Destroy
 return
 
-
-
 ;****
 
 InstallerButtonInstaller8:
@@ -10459,9 +10490,7 @@ gui -SysMenu
 Gui Show, center ,Demo Image
 return
 
-
 ButtonSnap13:
-
 ScreenCapture(location:="clipboard")
 sleep, 500
 ;InputBox,Userbotit, Pick Number,Choose Botit Number to Save/Replace ,,250,150
@@ -10480,7 +10509,6 @@ msgbox,,,Crop Fin,2
 ;gui Destroy
 return
 
-
 ;****
 
 InstallerButtonInstaller9:
@@ -10494,9 +10522,7 @@ gui -SysMenu
 Gui Show, center ,Demo Image
 return
 
-
 ButtonSnap18:
-
 ScreenCapture(location:="clipboard")
 sleep, 500
 ;InputBox,Userbotit, Pick Number,Choose Botit Number to Save/Replace ,,250,150
@@ -10514,8 +10540,6 @@ Gdip_Shutdown(pToken)
 msgbox,,,Crop Fin,2
 ;gui Destroy
 return
-
-
 
 InstallerButtonManual:
 Gui, Tab, 1
@@ -10564,7 +10588,6 @@ gui Destroy
 Gosub,ButtonInstaller
 return
 
-
 ;****
 
 InstallerButtonInstaller10:
@@ -10583,7 +10606,6 @@ Gui Show, center ,Demo Image
 return
 
 ButtonSnap15:
-
 ScreenCapture(location:="clipboard")
 sleep, 500
 ;InputBox,Userbotit, Pick Number,Choose Botit Number to Save/Replace ,,250,150
@@ -10603,7 +10625,6 @@ msgbox,,,Crop Fin,2
 return
 
 ButtonSnap23:
-
 ScreenCapture(location:="clipboard")
 sleep, 500
 ;InputBox,Userbotit, Pick Number,Choose Botit Number to Save/Replace ,,250,150
@@ -10623,7 +10644,6 @@ msgbox,,,Crop Fin,2
 return
 
 ButtonSnap24:
-
 ScreenCapture(location:="clipboard")
 sleep, 500
 ;InputBox,Userbotit, Pick Number,Choose Botit Number to Save/Replace ,,250,150
@@ -10655,9 +10675,7 @@ gui -SysMenu
 Gui Show, center ,Demo Image
 return
 
-
 ButtonSnap20:
-
 ScreenCapture(location:="clipboard")
 sleep, 500
 ;InputBox,Userbotit, Pick Number,Choose Botit Number to Save/Replace ,,250,150
@@ -10675,7 +10693,6 @@ Gdip_Shutdown(pToken)
 msgbox,,,Crop Fin,2
 ;gui Destroy
 return
-
 
 Callmapper(ImgNamew,ImgNameh,Nx,Ny)
 {
@@ -11070,9 +11087,6 @@ InstallerGuiClose:
 gui Destroy
 return
 
-
-
-
 submit_all:
 Gui, Submit, Nohide
 return
@@ -11160,11 +11174,9 @@ WM_LBUTTONDOWN(wParam,lParam,msg,hwnd)
 !v::listvars
 ;esc::exitapp
 
-
 buttonClosegui:
 gui Destroy
 return
-
 
 GuiEscape:
 GuiClose:
@@ -11172,8 +11184,6 @@ ExitApp
 
 MyProgress:
 MyProgress ++
-
-
 
 Choose:
 Gui,Submit, Nohide
@@ -11699,8 +11709,6 @@ DefineBox(ByRef TopLeftX, ByRef TopLeftY, ByRef BottomRightX, ByRef BottomRightY
 
 ; Disable Lbutton Clickthrough
 #If WinExist(A)
-	
-
 
 ;********************************************************* anim gif/jpg
 
