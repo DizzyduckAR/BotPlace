@@ -18,3 +18,10 @@ https://www.patreon.com/AutoMirror
 https://youtu.be/NVou1OWsGxQ
 https://github.com/DizzyduckAR/BotIt/raw/master/BotIT%20Games/BotIt%20Summoner%20Wars%20V0.3.1.zip
 https://github.com/DizzyduckAR/BotIt/raw/master/TXT/UpdateBots.txt
+
+*Raid*
+0.4.0
+https://www.patreon.com/AutoMirror
+
+
+https://github.com/DizzyduckAR/BotIt/raw/master/TXT/UpdateBots.txt
