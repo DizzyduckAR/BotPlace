@@ -5,7 +5,7 @@ SetWorkingDir %A_ScriptDir%
 
 modus=%1% 
 TxtURL=https://raw.githubusercontent.com/DizzyduckAR/BotIt/master/TXT/UpdateBots.txt
-UpdateBotURL=https://raw.githubusercontent.com/DizzyduckAR/BotIt/master/TXT/UpdateLauncher.txt
+UpdateBotURL=https://github.com/DizzyduckAR/BotIt/raw/master/TXT/UpdateLauncher.txt
 update2:=0
 
 
@@ -106,11 +106,13 @@ gui,hidden:show,hide,#%A_ScriptFullPath%#
 
 ;Game picker
 ;\\\\\\\\\\\\\\\\\\\\
-
+IfExist,hoticon.png
+{
 Menu, Tray, Icon, hoticon.png
+}
 gui,font,s12
 gui,add,text,w480 x110 y12 ,Game Picker:
-Gui Add, DropDownList, x220 y10 w160  vmenuChoice GmenuChoice, Pokemon Masters|DigimonReA|Summoners War|
+Gui Add, DropDownList, x220 y10 w160  vmenuChoice GmenuChoice, Pokemon Masters|DigimonReA|Summoners War|Raid|
 
 
 gui,show,, Bot-It launcher %AppVersion%
@@ -129,16 +131,59 @@ gui, Destroy
 folderchecker=Bots\%tempchoice%\
 
 ;\Dl Calling
+
+
 if (menuChoice = "Pokemon Masters")
 {
 	IfNotExist %folderchecker%
 	{
 		FileCreateDir,%folderchecker%
 	}
-	FileDelete,NewUpdate.txt
+	FileDelete,%folderchecker%NewUpdate.txt
 	URLDownloadToFile,%TxtURL%,%folderchecker%NewUpdate.txt
+	FileReadLine ,TmpL2,%folderchecker%\NewUpdate.txt,2
 	FileReadLine  ,TmpL4,%folderchecker%NewUpdate.txt,5
-	FileDelete,%TxtURL%,%folderchecker%NewUpdate.txt
+	FileDelete,%folderchecker%NewUpdate.txt
+}
+
+if (menuChoice = "DigimonReA")
+{
+	IfNotExist %folderchecker%
+	{
+		FileCreateDir,%folderchecker%
+	}
+	FileDelete,%folderchecker%NewUpdate.txt
+	URLDownloadToFile,%TxtURL%,%folderchecker%NewUpdate.txt
+	FileReadLine ,TmpL2,%folderchecker%\NewUpdate.txt,9
+	FileReadLine  ,TmpL4,%folderchecker%NewUpdate.txt,12
+	
+	FileDelete,%folderchecker%NewUpdate.txt
+}
+
+if (menuChoice = "Summoners War")
+{
+	IfNotExist %folderchecker%
+	{
+		FileCreateDir,%folderchecker%
+	}
+	FileDelete,%folderchecker%NewUpdate.txt
+	URLDownloadToFile,%TxtURL%,%folderchecker%NewUpdate.txt
+	FileReadLine ,TmpL2,%folderchecker%\NewUpdate.txt,16
+	FileReadLine  ,TmpL4,%folderchecker%NewUpdate.txt,19
+	FileDelete,%folderchecker%NewUpdate.txt
+}
+
+if (menuChoice = "Raid")
+{
+	IfNotExist %folderchecker%
+	{
+		FileCreateDir,%folderchecker%
+	}
+	FileDelete,%folderchecker%NewUpdate.txt
+	URLDownloadToFile,%TxtURL%,%folderchecker%NewUpdate.txt
+	FileReadLine ,TmpL2,%folderchecker%\NewUpdate.txt,23
+	FileReadLine  ,TmpL4,%folderchecker%NewUpdate.txt,26
+	FileDelete,%folderchecker%NewUpdate.txt
 }
 
 
@@ -178,24 +223,76 @@ ifexist %folderchecker%
 	FileReadLine  ,L3,%folderchecker%\Update.txt,4
 	
 	
-	FileReadLine ,TmpL2,%folderchecker%\NewUpdate.txt,2
-	if (L1 = TmpL2)
-	{
-		;msgbox, no update
-		Playbot:=1
-	}
-	
-	if (L1 > TmpL2) or (L1 < TmpL2)
-	{
+	if (menuChoice = "Pokemon Masters")
+	{	
 		
-		update:=1
+		if (L1 = TmpL2)
+		{
+		;msgbox, no update
+			Playbot:=1
+		}
+		
+		if (L1 > TmpL2) or (L1 < TmpL2)
+		{
+			
+			update:=1
+		}
 	}
 	
+	if (menuChoice = "DigimonReA")
+	{	
+		
+		if (L1 = TmpL2)
+		{
+		;msgbox, no update
+			Playbot:=1
+		}
+		
+		if (L1 > TmpL2) or (L1 < TmpL2)
+		{
+			
+			update:=1
+		}
+	}
+	
+	if (menuChoice = "Raid")
+	{	
+		
+		if (L1 = TmpL2)
+		{
+		;msgbox, no update
+			Playbot:=1
+		}
+		
+		if (L1 > TmpL2) or (L1 < TmpL2)
+		{
+			
+			update:=1
+		}
+	}
+	
+	
+	
+	if (menuChoice = "Summoners War")
+	{	
+		
+		if (L1 = TmpL2)
+		{
+		;msgbox, no update
+			Playbot:=1
+		}
+		
+		if (L1 > TmpL2) or (L1 < TmpL2)
+		{
+			
+			update:=1
+		}
+	}
 	
 	
 	
 	AppVersion=V%L1%
-	AppUpdateVersion=V%L1%
+	AppUpdateVersion=V%TmpL2%
 	AppName=%tempchoice%
 ;AppFileNameNoExt=_AppFileNameNoExt_
 	AppTXTURL=%TxtURL%
