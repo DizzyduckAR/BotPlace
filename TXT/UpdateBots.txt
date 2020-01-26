@@ -20,7 +20,7 @@ https://github.com/DizzyduckAR/BotIt/raw/master/BotIT%20Games/BotIt%20Summoner%2
 https://github.com/DizzyduckAR/BotIt/raw/master/TXT/UpdateBots.txt
 
 *Raid*
-0.4.0
+0.4.1
 https://www.patreon.com/AutoMirror
 
 https://github.com/DizzyduckAR/BotIt/raw/master/BotIT%20Games/Raid%20v0.4.zip
