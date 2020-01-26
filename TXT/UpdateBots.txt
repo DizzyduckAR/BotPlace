@@ -23,5 +23,5 @@ https://github.com/DizzyduckAR/BotIt/raw/master/TXT/UpdateBots.txt
 0.4.0
 https://www.patreon.com/AutoMirror
 
-
+https://github.com/DizzyduckAR/BotIt/raw/master/BotIT%20Games/Raid%20v0.4.zip
 https://github.com/DizzyduckAR/BotIt/raw/master/TXT/UpdateBots.txt
