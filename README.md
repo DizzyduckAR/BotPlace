@@ -2,6 +2,11 @@
 BotIt frame to control games / work
 
 
+V0.4
+Added Summoners war 
+Added Raid
+
+
 V0.3
 
 Added DigimonReA
