@@ -1,6 +1,13 @@
 # BotIt Auto Updater
 BotIt frame to control games / work
 
+31/01/2020
+
+Added:
+Calibria v0.1 (new game)
+Raid v0.4.3
+
+
 29/01/20
 Pokemon Masters V0.6.5 Update
 
