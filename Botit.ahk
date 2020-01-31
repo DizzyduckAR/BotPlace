@@ -112,7 +112,7 @@ Menu, Tray, Icon, hoticon.png
 }
 gui,font,s12
 gui,add,text,w480 x110 y12 ,Game Picker:
-Gui Add, DropDownList, x220 y10 w160  vmenuChoice GmenuChoice, Pokemon Masters|DigimonReA|Summoners War|Raid|
+Gui Add, DropDownList, x220 y10 w160  vmenuChoice GmenuChoice, Pokemon Masters|DigimonReA|Summoners War|Raid|Calibria|
 
 
 gui,show,, Bot-It launcher %AppVersion%
@@ -188,6 +188,18 @@ if (menuChoice = "Raid")
 
 
 
+if (menuChoice = "Calibria")
+{
+	IfNotExist %folderchecker%
+	{
+		FileCreateDir,%folderchecker%
+	}
+	FileDelete,%folderchecker%NewUpdate.txt
+	URLDownloadToFile,%TxtURL%,%folderchecker%NewUpdate.txt
+	FileReadLine ,TmpL2,%folderchecker%\NewUpdate.txt,30
+	FileReadLine  ,TmpL4,%folderchecker%NewUpdate.txt,33
+	FileDelete,%folderchecker%NewUpdate.txt
+}
 
 
 
@@ -274,6 +286,23 @@ ifexist %folderchecker%
 	
 	
 	if (menuChoice = "Summoners War")
+	{	
+		
+		if (L1 = TmpL2)
+		{
+		;msgbox, no update
+			Playbot:=1
+		}
+		
+		if (L1 > TmpL2) or (L1 < TmpL2)
+		{
+			
+			update:=1
+		}
+	}
+	
+	
+	if (menuChoice = "Calibria")
 	{	
 		
 		if (L1 = TmpL2)
@@ -427,9 +456,9 @@ return
 
 ButtonYoutube:
 if AppUpdateWebsite
-	run, %AppUpdateWebsite% ;Webseite ?ffnen
+	run, %AppUpdateWebsite% ;Website
 else
-	run, %AppWebsite2% ;Webseite ?ffnen
+	run, %AppWebsite2% ;Website
 return
 
 
