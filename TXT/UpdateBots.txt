@@ -27,8 +27,8 @@ https://github.com/DizzyduckAR/BotIt/raw/master/BotIT%20Games/Raid%20v0.4.3.zip
 https://github.com/DizzyduckAR/BotIt/raw/master/TXT/UpdateBots.txt
 
 *Calibria*
-0.1.0
+0.1.3
 https://www.patreon.com/AutoMirror
 https://youtu.be/PHCG7_RPPoY
-https://github.com/DizzyduckAR/BotIt/raw/master/BotIT%20Games/Calibria%20v0.1.zip
+https://github.com/DizzyduckAR/BotIt/raw/master/BotIT%20Games/Calibria%20v0.1.3.zip
 https://github.com/DizzyduckAR/BotIt/raw/master/TXT/UpdateBots.txt
