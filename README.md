@@ -1,6 +1,12 @@
 # BotIt Auto Updater
 BotIt frame to control games / work
 
+21/02/2020
+
+Few update to get all games run on same gui.
+few fixes to bgs scanner
+
+
 31/01/2020
 
 Added:
