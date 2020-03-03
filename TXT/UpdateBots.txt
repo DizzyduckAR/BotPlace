@@ -1,5 +1,4 @@
 *pokemon masters*
-<<<<<<< HEAD
 0.8.9
 https://www.patreon.com/AutoMirror
 https://youtu.be/sC_sdXa61Sc
