@@ -3,6 +3,12 @@
 https://www.patreon.com/AutoMirror
 https://youtu.be/sC_sdXa61Sc
 https://github.com/DizzyduckAR/BotIt/raw/master/BotIT%20Games/BotIt%20Pokemon%20masters%20V0.9.1.zip
+=======
+0.8.8
+https://www.patreon.com/AutoMirror
+https://youtu.be/sC_sdXa61Sc
+https://github.com/DizzyduckAR/BotIt/raw/master/BotIT%20Games/BotIt_Pokemon_masters_V0.8.8.zip
+>>>>>>> d61e12d51adc67155c270e1c183bb289ee76a957
 https://github.com/DizzyduckAR/BotIt/raw/master/TXT/UpdateBots.txt
 
 *DigimonReA*
@@ -13,10 +19,10 @@ https://github.com/DizzyduckAR/BotIt/raw/master/BotIT%20Games/DigimonRe%200.5.0.
 https://github.com/DizzyduckAR/BotIt/raw/master/TXT/UpdateBots.txt
 
 *Summoners War*
-0.3.6
+0.4.0
 https://www.patreon.com/AutoMirror
 https://youtu.be/NVou1OWsGxQ
-https://github.com/DizzyduckAR/BotIt/raw/master/BotIT%20Games/BotIt%20Summoner%20Wars%20V0.3.6.zip
+https://github.com/DizzyduckAR/BotIt/raw/master/BotIT%20Games/BotIt%20Summoner%20Wars%20V0.4.0.zip
 https://github.com/DizzyduckAR/BotIt/raw/master/TXT/UpdateBots.txt
 
 *Raid*
