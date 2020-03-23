@@ -1,6 +1,8 @@
 # BotIt Auto Updater
 BotIt frame to control games / work
 
+https://github.com/DizzyduckAR/BotIt/raw/master/Info%20Images/Botit_Info1.png
+
 14/03/2020
 
 SW
