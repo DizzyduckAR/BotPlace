@@ -5,6 +5,42 @@ Bot-it Draw:
 Image Scanner Draw:
 ![chrome_OPVpdHrhvp](https://user-images.githubusercontent.com/52171360/77761342-22383100-6ff5-11ea-8644-f652c5bb0dfe.png)
 
+Change Log:
+BotIt project V0.1.7:
+
+Re path the all app to start from Botit.exe outside the Folder.
+Botit.exe will check if Core Found if not found a gui with download will be showing.
+
+if update detected a Update Gui with Update Button will show (Pass Button will also show up on update to allow no update)
+
+if core found and No update pass to Botit and open Botit Main GUI.
+
+Terminal been removed. all procs are on popen now De attached them from main app.
+
+All Bots Been added with img folder button to allow user go check images.
+
+main App resized to 2.4mb. update main will only replace the old exe and add new images to ui if needed. rest is solid state in folder.
+
+All Been Tested and working.
+we gonna fix/Update the bots now and push it all at once.
+
+in order to save Bots user can copy old \BotitCore\Bots\ to the new app.
+same for Boxes. \BotitCore\avd\
+
+Added try to all procs.
+"Core.zip" in Github Will hold full app from now on
+"Update.zip" in Github will hold the changes from core build to new update.
+
+New Structure:
+
+Botit.exe
+-- Folder Botit
+--Sub Folders BotitCore / UiCore / python utils and packs
+--Bots in \Botit\BotitCore\Bots\ Folder
+--Boxes in \Botit\BotitCore\AVD\
+Main app Size to allow full grab of all files will be 2MB from now.
+user will be able to download all Cores and Add ons
+
 First public push for Bot-it Frame.
 
 All in one fully portable Android Phone Mirror / Android Emulator / Bot-It
