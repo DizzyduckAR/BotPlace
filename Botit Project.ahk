@@ -2,7 +2,8 @@
 ; #Warn  ; Enable warnings to assist with detecting common errors.
 
 
-
+;Check Updates Server VS Local
+;######
 IniRead,BotitLocalV,Botit\BotitCore\Update.ini,BotIt Build,BotitLocalV
 UpdateBotURL=https://raw.githubusercontent.com/DizzyduckAR/BotIt/master/TXT/UpdateBots.ini
 URLDownloadToFile,%UpdateBotURL%,UpdateBots.ini
@@ -10,8 +11,9 @@ IniRead,BotitSver,UpdateBots.ini,BotIt Build,BotitSver
 IniRead,BotitLink,UpdateBots.ini,BotIt Build,BotitLink
 FileDelete,UpdateBots.ini
 ;msgbox, % BotitLocalV  BotitSver  BotitLink
+;######
 
-IfNotExist, %A_ScriptDir%\Botit\Botit.exe
+IfNotExist, %A_ScriptDir%\Botit\Botit.exe  ;if no core found show core download GUI
 {
 	SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 	SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
@@ -29,7 +31,7 @@ IfNotExist, %A_ScriptDir%\Botit\Botit.exe
 	
 }
 
-if (BotitLocalV < BotitSver)
+if (BotitLocalV < BotitSver) ;if Local Version Lower then Server Version Show Update GUI
 {
 	SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 	SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
@@ -46,7 +48,7 @@ if (BotitLocalV < BotitSver)
 	return
 }
 
-if (BotitLocalV >= BotitSver)
+if (BotitLocalV >= BotitSver) ;if Local Version Higher or = then Server Pass to Start Func
 {
 	Gosub,ButtonStart
 }
@@ -79,7 +81,7 @@ zipname=Core.zip
 zipFolder=%A_ScriptDir%\Botit
 SmartZip(zipname,zipFolder)
 FileDelete,%A_ScriptDir%\Core.zip
-Gosub,ButtonStart
+Gosub,ButtonStart ;Pass to Start Func
 
 ButtonStartUpdate:
 Download("Update.zip", BotitLink)
@@ -88,7 +90,7 @@ zipname=Update.zip
 zipFolder=%A_ScriptDir%\Botit
 SmartZip(zipname,zipFolder)
 FileDelete,%A_ScriptDir%\Update.zip
-Gosub,ButtonStart
+Gosub,ButtonStart ;Pass to Start Func
 return
 
 
