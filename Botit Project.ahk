@@ -7,6 +7,7 @@
 IniRead,BotitLocalV,Botit\BotitCore\Update.ini,BotIt Build,BotitLocalV
 UpdateBotURL=https://raw.githubusercontent.com/DizzyduckAR/BotIt/master/TXT/UpdateBots.ini
 URLDownloadToFile,%UpdateBotURL%,UpdateBots.ini
+global BotitLocalV
 global BotitSver
 global BotitLink
 IniRead,BotitSver,UpdateBots.ini,BotIt Build,BotitSver
@@ -21,7 +22,7 @@ AnimatedGifControl(1, url,"w200 h200 x100")
 url2 := "https://raw.githubusercontent.com/DizzyduckAR/BotIt/master/Info%20Images/UpdateDL.png"
 ;AnimatedGifControl(1, url,"w120 h140 y+10 x50 ")
 if (BotitLocalV < BotitSver)
-	{
+{
 	AnimatedGifControl(1, url2, "hWndhWndGifAnimControl w120 h140 y+10 x140")
 	;DetectHiddenWindows, ON   
 	;GuiControlGet, Image, 1:Pos, % hWndGifAnimControl
