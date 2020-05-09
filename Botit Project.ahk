@@ -7,53 +7,103 @@
 IniRead,BotitLocalV,Botit\BotitCore\Update.ini,BotIt Build,BotitLocalV
 UpdateBotURL=https://raw.githubusercontent.com/DizzyduckAR/BotIt/master/TXT/UpdateBots.ini
 URLDownloadToFile,%UpdateBotURL%,UpdateBots.ini
+global BotitSver
+global BotitLink
 IniRead,BotitSver,UpdateBots.ini,BotIt Build,BotitSver
 IniRead,BotitLink,UpdateBots.ini,BotIt Build,BotitLink
 FileDelete,UpdateBots.ini
 ;msgbox, % BotitLocalV  BotitSver  BotitLink
 ;######
 
-IfNotExist, %A_ScriptDir%\Botit\Botit.exe  ;if no core found show core download GUI
+;Gui, Color, 24292E
+url := "https://raw.githubusercontent.com/DizzyduckAR/BotIt/master/Info%20Images/favicon.png"
+AnimatedGifControl(1, url,"w200 h200 x100")
+url2 := "https://raw.githubusercontent.com/DizzyduckAR/BotIt/master/Info%20Images/UpdateDL.png"
+;AnimatedGifControl(1, url,"w120 h140 y+10 x50 ")
+if (BotitLocalV < BotitSver)
+	{
+	AnimatedGifControl(1, url2, "hWndhWndGifAnimControl w120 h140 y+10 x140")
+	;DetectHiddenWindows, ON   
+	;GuiControlGet, Image, 1:Pos, % hWndGifAnimControl
+	;GuiControlGet, hWndGifAnim, 1:Hwnd , % hWndGifAnimControl
+	;Gui, Add, Text, % "w" ImageW " h" ImageH " x" ImageX " y" ImageY " gOnClick"
+}
+IfNotExist, %A_ScriptDir%\Botit\Botit.exe
+	{
+		url3 := "https://raw.githubusercontent.com/DizzyduckAR/BotIt/master/Info%20Images/CoreDL.png"
+		AnimatedGifControl(1, url3,"w120 h140 y+10 x150" )
+}
+Gui Add, Progress, vMyProgress x-1 y370 w401 cB2AF52 h30  -Smooth
+Gui Font, Bold s10
+Gui Add, Text, x0 y382 w400 h30 center cBlack +BackgroundTrans vBotittext , Welcome To Bot-It 
+Gui Show, w400 h400, Bot-It Project
+CoreCheck()
+Updater()
+Gosub,ButtonStart
+Return
+
+;AnimatedGifControl(1, file, "hWndhWndGifAnimControl w200 h200")
+
+OnClick:
+Run, http://en.wikipedia.org/wiki/File:Globespin.gif
+Return
+
+CoreCheck()
 {
-	SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
-	SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
-	url := "https://github.com/DizzyduckAR/BotIt/blob/master/Info%20Images/Botit_Info1.png?raw=true"
-	Gui, Margin, 20, 20
-	Gui New, +HwndhWndGifAnim
-	
-	AnimatedGifControl(hWndGifAnim, url, "w600 h400")
-	Gui Add, Button, x260  w80 h23 , &Start Download
-	Gui Add, Button, x260  w80 h23 , &Exit
-	gui -SysMenu
-	Gui Show, center ,Bot-It Project
-	
-	return
+	IfExist, %A_ScriptDir%\Botit\Botit.exe  ;if no core found show core download GUI
+	{
+		
+		GuiControl,, MyProgress, +50
+		GuiControl,,Botittext,Core Check OK
+		sleep,500
+		
+		
+	}
+	IfNotExist, %A_ScriptDir%\Botit\Botit.exe  ;if no core found show core download GUI
+	{
+		GuiControl,,Botittext,Core Missing
+		sleep,500
+		
+		msgbox,0x1,Core Missing, Do you want to Download?
+		IfMsgBox OK
+		{
+			
+			GuiControl,,Botittext,Download Started
+			GuiControl,, MyProgress, +10
+			sleep,500
+			Gosub,ButtonStartDownload
+		}
+	}
 	
 }
 
-if (BotitLocalV < BotitSver) ;if Local Version Lower then Server Version Show Update GUI
+Updater()
 {
-	SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
-	SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
-	url := "https://user-images.githubusercontent.com/52171360/77746936-fe67f180-6fda-11ea-92bc-7a5e1fedb957.png"
-	Gui, Margin, 20, 20
-	Gui New, +HwndhWndGifAnim
+	if (BotitLocalV < BotitSver) ;if Local Version Lower then Server Version Show Update GUI
+	{
+		GuiControl,,Botittext,Update Found
+		sleep,500
+		
+		msgbox,0x1,Update Found, Do you want to Download?
+		IfMsgBox OK
+		{
+			
+			GuiControl,,Botittext,Download Started
+			GuiControl,, MyProgress, +10
+			sleep,500
+			Gosub,ButtonStartUpdate
+		}
+	}
 	
-	AnimatedGifControl(hWndGifAnim, url, "w600 h400")
-	Gui Add, Button, x260  w80 h23 , &Start Update
-	Gui Add, Button, x260  w80 h23 , &Skip Update
-	gui -SysMenu
-	Gui Show, center ,Bot-It Project
-	
-	return
+	if (BotitLocalV >= BotitSver) ;if Local Version Higher or = then Server Pass to Start Func
+	{
+		
+		GuiControl,,Botittext,No Update Found
+		GuiControl,, MyProgress, +50
+	}
 }
+	
 
-if (BotitLocalV >= BotitSver) ;if Local Version Higher or = then Server Pass to Start Func
-{
-	Gosub,ButtonStart
-}
-	
-return
 
 
 esc::exitapp
@@ -66,6 +116,7 @@ IfExist, %A_ScriptDir%\Botit\Botit.exe
 	ExitApp
 	
 }
+ExitApp
 return
 
 ButtonExit:
@@ -76,21 +127,46 @@ Gosub,ButtonStart
 return
 
 ButtonStartDownload:
-Download("Core.zip", "https://github.com/DizzyduckAR/BotIt/blob/master/Core.zip?raw=true")
+GuiControl,, MyProgress, +10
+Download("Core.zip", "https://botit-project.s3.us-east-2.amazonaws.com/Core.zip")
+
+GuiControl,,Botittext,Download Finished
+GuiControl,, MyProgress, +10
 zipname=Core.zip
 zipFolder=%A_ScriptDir%\Botit
+GuiControl,,Botittext,Start Extracting
 SmartZip(zipname,zipFolder)
+
+GuiControl,,Botittext,Done Extracting
+GuiControl,, MyProgress, +10
 FileDelete,%A_ScriptDir%\Core.zip
-Gosub,ButtonStart ;Pass to Start Func
+
+GuiControl,,Botittext,Update Over
+GuiControl,, MyProgress, +10
+Gosub,ButtonStart
+return
+
 
 ButtonStartUpdate:
-Download("Update.zip", BotitLink)
-;URLDownloadToFile,%BotitLink%,Update.zip
+
+GuiControl,,Botittext,Download Started
+GuiControl,, MyProgress, +10
+Download("Update.zip", "https://botit-project.s3.us-east-2.amazonaws.com/Update.zip")
+
+GuiControl,,Botittext,Done Extracting
+GuiControl,, MyProgress, +10
 zipname=Update.zip
 zipFolder=%A_ScriptDir%\Botit
+GuiControl,,Botittext,Start Extracting
 SmartZip(zipname,zipFolder)
+
+GuiControl,,Botittext,Done Extracting
+GuiControl,, MyProgress, +10
 FileDelete,%A_ScriptDir%\Update.zip
-Gosub,ButtonStart ;Pass to Start Func
+
+GuiControl,,Botittext,Deploy Over
+GuiControl,, MyProgress, +10
+Gosub,ButtonStart
 return
 
 
@@ -106,7 +182,7 @@ return
 	http://www.autohotkey.com/forum/viewtopic.php?p=523649#523649
 */
 
-SmartZip(s, o, t = 4)
+SmartZip(s, o, t = 0x14)
 {
 	IfNotExist, %s%
 		return, -1        ; The souce is not exist. There may be misspelling.
@@ -199,7 +275,7 @@ AnimatedGifControl(GuiNameOrHwnd, GifFilePath, ControlOptions="") {
 		bgColor := AnimatedGifControl_GetSysColor(15) ;COLOR_3DFACE :Face color for three-dimensional display elements and for dialog box backgrounds.
 	
 	; Add the Gif Animation Control
-	Gui, %GuiNameOrHwnd%: Add, ActiveX, % "v" ObjectName " w" GifWidth " h" GifHeight " Disabled " ControlOptions, Shell.Explorer ;Mozilla.Browser
+	Gui, %GuiNameOrHwnd%: Add, ActiveX, % "v" ObjectName " w" GifWidth " h" GifHeight " Disabled " ControlOptions , Shell.Explorer ;Mozilla.Browser
 	%ObjectName%.Navigate("about:blank")
 	;How Do you Stretch a Background Image in a Web Page
 	;http://webdesign.about.com/od/css3/f/blfaqbgsize.htm	
@@ -285,7 +361,7 @@ AnimatedGifControl_GetSysColor(d_element) {
 	
 	Licence: Public Domain
 */
-		Download(path_p, dLocation_p)
+Download(path_p, dLocation_p)
 		{
 			global path, dLocation, FullFileName, FullSize
 			path = %path_p%
@@ -393,3 +469,5 @@ AnimatedGifControl_GetSysColor(d_element) {
 			
 			return, res
 		}
+
+
