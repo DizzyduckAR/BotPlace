@@ -1,5 +1,8 @@
 Welcome to Bot-It Project
 
+DL:
+https://github.com/DizzyduckAR/BotIt/raw/master/Botit%20Project.exe
+
 Bot-It is a multi frame app allow user to connect phones/Emulators/web sites/ and run automation on them with Botit.
 Bot-it allow user to run single and multi targets while no mouse / keys / screen will be used.
 
