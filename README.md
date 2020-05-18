@@ -10,6 +10,7 @@ All Parts / Procs ion botit are Open source or open source projects.
 Mod / Change / improve / break the code is freely allowed.
 
 Botit Mirror - Based on Scrcpy (open source)
+
 ![Botit_fIiLi3phWS](https://user-images.githubusercontent.com/52171360/78451435-79b04f80-763a-11ea-8bf1-e0657323d967.png)
 
 Allow any user to mirror and bot his phone or any android phone.
@@ -29,6 +30,7 @@ Will support redroid later on.
 
 
 Botit Web to allow user automate any web site with botit.
+
 ![Botit_nPws3Cc77k](https://user-images.githubusercontent.com/52171360/81484393-e8fcfe80-91f9-11ea-9f43-920be0b9c18f.png)
 
 Allow user to Bot any web with Botit and all the bot features.
@@ -36,13 +38,17 @@ Allow user to Bot any web with Botit and all the bot features.
 Bot-It - A small and open source image detector with background scan and control Support.
 this tiny unit will find anything you target it to find on any window.
 Few controller options with on the go ability to change controller.
+
 ![Botit_s5B43OdYjQ](https://user-images.githubusercontent.com/52171360/78451454-964c8780-763a-11ea-9d2f-0d6b520de9c7.png)
 
 SDL/Unity No mouse control with auto cord system read and calc from image scanner
 PC/Emulator No mouse use for nox/bluestack other win32api units.
 MouseLikeHuman Will use pc mouse and auto curve it movement with auto random move spd and auto read cords from image scanner to the target window.
+
 ![AutoHotkey_vM14bcIfyV](https://user-images.githubusercontent.com/52171360/81484415-18137000-91fa-11ea-99e1-7eaf724ec4e7.png)
+
 ![AutoHotkey_lbmooVyjCH](https://user-images.githubusercontent.com/52171360/81484418-1b0e6080-91fa-11ea-9181-2e96902fd507.png)
+
 ![AutoHotkey_sXWdpvy5eQ](https://user-images.githubusercontent.com/52171360/81484419-1f3a7e00-91fa-11ea-837b-df846af8db1e.png)
 
 
@@ -71,6 +77,7 @@ changing the window size after cropping images will break the images you crop.
 you cant detect image you cropped on 800*600 if you resize window to 960*540....
 
 For other help videos you can check our youtube
+
 https://www.youtube.com/channel/UC5OzmTUVUxZAPTRJwpwHCYg
 
 or in Discord(link in bots).
