@@ -1,0 +1,31 @@
+; This script was created by Arazu & Sefer#3011
+; https://discord.gg/CUgnVpk
+; https://github.com/DizzyduckAR/AutoMirror/
+; Modded By Sefer#3011
+; Code Restracture By Sefer#3011
+; BackGround Scanner By Arazu
+; Installer by Dizzy
+
+https://discord.gg/CUgnVpk  DISCORD
+
+
+Mirror by Scrcpy "Genymobile"
+https://github.com/Genymobile/scrcpy
+
+Gdip_ImageSearch()
+by MasterFocus - 02/APRIL/2013 00:30h BRT
+
+Gdip standard library v1.45 by tic (Tariq Porter) 07/09/11
+
+By SKAN,  Created : 19-Jul-2012
+
+
+; This script was created by Arazu & Sefer#3011
+; https://discord.gg/CUgnVpk
+; https://github.com/DizzyduckAR/AutoMirror/
+
+
+; #Sefer New scanner Func|Gui's|Tons of Help all over the place.
+
+:"PrintWindow is slow, and you can avoid that overhead on most windows. just use Gdip_BitmapFromScreen() with "hwnd:" string parameter instead of Gdip_BitmapFromHwnd(), and that will still work for inactive windows as long as the DWM is running. - guest3456(Forum)"
+https://github.com/zxc010613/iwclib/blob/master/changelog1.X.X.md
