@@ -1,0 +1,67 @@
+ 
+ {
+    "Pokemon masters": [
+    {
+    "DataServer":"1.0.1",
+    "ImgServer":"0.0.0",
+    "ActiveServer":"True"
+     }
+   ],
+   
+   "DigimonRe": [
+   
+    {
+        "DataServer":"0.6.3",
+        "ImgServer":"0.1.0",
+        "ActiveServer":"True"
+     }],
+
+    "Summoner Wars": [
+     {
+        "DataServer":"0.6.1",
+    "ImgServer":"0.1.0",
+    "ActiveServer":"True"
+   }
+   ],
+
+
+   "Raid": [
+    {
+       "DataServer":"0.4.5",
+   "ImgServer":"0.1.0",
+   "ActiveServer":"True"
+  }
+  ],
+
+  "Calibria": [
+    {
+       "DataServer":"0.5.0",
+   "ImgServer":"0.1.0",
+   "ActiveServer":"True"
+  }
+  ],
+
+  "The Seven Deadly Sins": [
+    {
+       "DataServer":"0.4.8",
+   "ImgServer":"0.1.0",
+   "ActiveServer":"True"
+  }
+  ],
+
+   "Fire Emblem Heroes": [
+     {
+        "DataServer":"1.0.1",
+        "ImgServer":"0.0.0",
+        "ActiveServer":"True"
+   }
+   ],
+   
+   "BotIt Build": [
+    {
+       "BotitSver":"0.2.3"
+  }
+  ]
+     
+   
+   }
