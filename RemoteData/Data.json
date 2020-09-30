@@ -60,7 +60,15 @@
    "Grand Summoners": [
      {
         "DataServer":"0.2.4",
-        "ImgServer":"0.0.0",
+        "ImgServer":"0.1.0",
+        "ActiveServer":"True"
+   }
+   ],
+
+   "MASS FOR THE DEAD": [
+     {
+        "DataServer":"0.8.1",
+        "ImgServer":"0.1.0",
         "ActiveServer":"True"
    }
    ],
