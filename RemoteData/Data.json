@@ -51,7 +51,7 @@
 
    "Fire Emblem Heroes": [
      {
-        "DataServer":"1.0.1",
+        "DataServer":"0.1.1",
         "ImgServer":"0.0.0",
         "ActiveServer":"True"
    }
