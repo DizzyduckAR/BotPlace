@@ -72,6 +72,14 @@
         "ActiveServer":"True"
    }
    ],
+
+   "Fate Grand Order": [
+     {
+        "DataServer":"0.1.1",
+        "ImgServer":"0.1.0",
+        "ActiveServer":"True"
+   }
+   ],
    
    "BotIt Build": [
     {
