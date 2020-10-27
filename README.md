@@ -6,10 +6,15 @@ Botit is a Free - open Source Mirror/Emulator/Automation tool.
 this project combine few smaller gits:
 
 *Auto-mirror - Android phone to pc mirror tool.
+
 *scrcpy - open source mirror tool base.
+
 *BotitAHK - image scanner with full window control ability. control any win32/chrome/pc game/apps..
-*LoginBase - Free ready to use User system and GUI based on Firebase. (PyQt in Pure python and Cloud Functions ready. just put your public key..).
+
+*LoginBase - Free ready to use User system and GUI based on Firebase. (PyQt in Pure python and Cloud Functions ready. just put your public key..)
+
 *Botit Py - Automation tool with deep learning (under development).
+
 *Botit Emulator - Portable emulator allow user build vm's on usb key.
 
 DL:
