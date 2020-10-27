@@ -18,7 +18,7 @@ this project combine few smaller gits:
 *Botit Emulator - Portable emulator allow user build vm's on usb key.
 
 DL:
-Link
+https://github.com/DizzyduckAR/BotIt/raw/master/BotIt%20Project-win-1.0.1.zip
 
 Bot-It is a multi frame app allow user to connect phones/Emulators/web sites/ and run automation on them with Botit.
 Bot-it allow user to run single and multi targets while no mouse / keys / screen will be used.
@@ -28,7 +28,7 @@ Mod / Change / improve / break the code is freely allowed.
 
 Botit Mirror - Based on Scrcpy (open source)
 
-Mirror1IMG
+![BotIt_Project_SwUUnuhjSA](https://user-images.githubusercontent.com/52171360/97316048-02f6d000-1872-11eb-9576-beb46b894128.png)
 
 Allow any user to mirror and bot his phone or any android phone.
 no root needed 
@@ -39,7 +39,7 @@ One click Phone IP Grab
 Very easy to use very fast mirror.
 
 BotIt Emulator - based on android studio and Qemu. Come with auto download for Stock Google android image and Emulator From Google Repo
-EmulatorIMG
+![BotIt_Project_5WprmhAxLa](https://user-images.githubusercontent.com/52171360/97316069-068a5700-1872-11eb-8ff8-618911bc120a.png)
 
 ***Under Development! not cooked.
 Full Portable boxes With easy change setting per BOX.
@@ -51,7 +51,7 @@ Bot-It - A small and open source image detector with background scan and control
 this tiny unit will find anything you target it to find on any window.
 Few controller options with on the go ability to change controller.
 
-BotitMobIMG
+![BotIt_Project_6O7r98H1lw](https://user-images.githubusercontent.com/52171360/97316081-09854780-1872-11eb-8c3d-4c785a7e1949.png)
 
 SDL/Unity No mouse control with auto cord system read and calc from image scanner
 PC/Emulator No mouse use for nox/bluestack other win32api units.
