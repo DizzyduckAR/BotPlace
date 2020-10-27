@@ -1,6 +1,6 @@
 Welcome to Bot-It Project
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/EHXa-QqE0ko" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![Show app and Help](https://user-images.githubusercontent.com/52171360/97310743-3e8e9b80-186c-11eb-87c2-7bbeae2fe6ec.png)](https://youtu.be/EHXa-QqE0ko)
 
 Botit is a Free - open Source Mirror/Emulator/Automation tool.
 this project combine few smaller gits:
