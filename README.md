@@ -1,5 +1,7 @@
 Welcome to Bot-It Project
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/EHXa-QqE0ko" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 Botit is a Free - open Source Mirror/Emulator/Automation tool.
 this project combine few smaller gits:
 
@@ -74,10 +76,6 @@ Bugs:
 window size. while moving the window or stacking few window's on each other will not be any issue
 changing the window size after cropping images will break the images you crop.
 you cant detect image you cropped on 800*600 if you resize window to 960*540....
-
-For other help videos you can check our youtube
-
-https://www.youtube.com/channel/UC5OzmTUVUxZAPTRJwpwHCYg
 
 Discord:
 https://discord.gg/ggRCXS2
