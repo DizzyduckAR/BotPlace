@@ -40,6 +40,7 @@ One click Phone IP Grab
 Very easy to use very fast mirror.
 
 BotIt Emulator - based on android studio and Qemu. Come with auto download for Stock Google android image and Emulator From Google Repo
+
 ![BotIt_Project_5WprmhAxLa](https://user-images.githubusercontent.com/52171360/97316069-068a5700-1872-11eb-8ff8-618911bc120a.png)
 
 ***Under Development! not cooked.
