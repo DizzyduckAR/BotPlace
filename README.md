@@ -1,3 +1,17 @@
+Upcoming changes.
+
+Remove all google and amazon services.
+replace auth with django backend
+amazon bucket will be replaced too.
+
+both are off for the moment until we can find host who wont wake up each day randomly picking users he must get off becuse he had a "feeling"..
+point was to show users free service. we do not recommend this services any more and not gonna store or share any data on them or from them.
+
+they do not have any effect on us and the services can be replaced with minimal work.
+
+
+
+
 Welcome to Bot-It Project
 
 [![Show app and Help](https://user-images.githubusercontent.com/52171360/97310743-3e8e9b80-186c-11eb-87c2-7bbeae2fe6ec.png)](https://youtu.be/EHXa-QqE0ko)
