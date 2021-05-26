@@ -4,7 +4,7 @@ Old Mirror and Bot Tool been Removed.
 
  
 Auto-mirror Repo is now Updated and working for Android Mirror.
-
+https://github.com/DizzyduckAR/AutoMirror
  
 BotPlace Repo:
 Home for Botit Developer tool.
