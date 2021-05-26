@@ -1,108 +1,45 @@
-Upcoming changes.
+Repo Update.
 
-Remove all google and amazon services.
-replace auth with django backend
-amazon bucket will be replaced too.
+Old Mirror and Bot Tool been Removed.
 
-both are off for the moment until we can find host who wont wake up each day randomly picking users he must get off becuse he had a "feeling"..
-point was to show users free service. we do not recommend this services any more and not gonna store or share any data on them or from them.
+ 
+Auto-mirror Repo is now Updated and working for Android Mirror.
 
-they do not have any effect on us and the services can be replaced with minimal work.
+ 
+BotPlace Repo:
+Home for Botit Developer tool.
+Home for Botit Cloud Python version.
 
+Bot Place is a full Code and No Code Automtion Platform for Windows Systems.
 
+Auto get Bot from web app or local. (Add / edit / delete..)
+![python_JvseZYwGoX](https://user-images.githubusercontent.com/52171360/119627821-35bb7380-be15-11eb-87b1-1b3d967dec38.png)
 
+Full Control From UI. All the Data will be auto display.
+![python_tIK9D8vJco](https://user-images.githubusercontent.com/52171360/119627832-381dcd80-be15-11eb-9978-aff779db5c39.png)
 
-Welcome to Bot-It Project
+Control Modes for Each Bot, (Mode can be called by any client no changes needed.)
+![python_3Av06vMi3n](https://user-images.githubusercontent.com/52171360/119627844-39e79100-be15-11eb-8f77-c1bc4e6d11cd.png)
 
-[![Show app and Help](https://user-images.githubusercontent.com/52171360/97310743-3e8e9b80-186c-11eb-87c2-7bbeae2fe6ec.png)](https://youtu.be/EHXa-QqE0ko)
+Control mode Objects. add \ remove.
+![python_9rqA4lbJUJ](https://user-images.githubusercontent.com/52171360/119627854-3bb15480-be15-11eb-9c6b-93bef11167e1.png)
 
-Botit is a Free - open Source Mirror/Emulator/Automation tool.
-this project combine few smaller gits:
+Edit crop/getpixel. self Window capture system for inactive window
+![python_AzgrZfRCUK](https://user-images.githubusercontent.com/52171360/119627857-3d7b1800-be15-11eb-8f73-ca3c11685b1b.png)
 
-*Auto-mirror - Android phone to pc mirror tool.
+Full local Bot database view and control. Removed Any Code needed to build a portable automation.
+![python_u5ol6hpaVm](https://user-images.githubusercontent.com/52171360/119627865-3f44db80-be15-11eb-8d56-e03916da055e.png)
 
-*scrcpy - open source mirror tool base.
-
-*BotitAHK - image scanner with full window control ability. control any win32/chrome/pc game/apps..
-
-*LoginBase - Free ready to use User system and GUI based on Firebase. (PyQt in Pure python and Cloud Functions ready. just put your public key..)
-
-*Botit Py - Automation tool with deep learning (under development).
-
-*Botit Emulator - Portable emulator allow user build vm's on usb key.
-
-DL:
-
-https://github.com/DizzyduckAR/BotIt/raw/master/BotIt%20Project-win-1.0.1.zip
-
-Bot-It is a multi frame app allow user to connect phones/Emulators/web sites/ and run automation on them with Botit.
-Bot-it allow user to run single and multi targets while no mouse / keys / screen will be used.
-
-All Parts / Procs ion botit are Open source or open source projects.
-Mod / Change / improve / break the code is freely allowed.
-
-Botit Mirror - Based on Scrcpy (open source)
-
-![BotIt_Project_SwUUnuhjSA](https://user-images.githubusercontent.com/52171360/97316048-02f6d000-1872-11eb-9576-beb46b894128.png)
-
-Allow any user to mirror and bot his phone or any android phone.
-no root needed 
-USB and Wifi Supported.
-One click mirror
-One click Phone IP Grab
-
-Very easy to use very fast mirror.
-
-BotIt Emulator - based on android studio and Qemu. Come with auto download for Stock Google android image and Emulator From Google Repo
-
-![BotIt_Project_5WprmhAxLa](https://user-images.githubusercontent.com/52171360/97316069-068a5700-1872-11eb-8ff8-618911bc120a.png)
-
-***Under Development! not cooked.
-Full Portable boxes With easy change setting per BOX.
-Support Multi Emulations.
-Will support redroid later on.
+hybrid Box. While System is "boxed" to allow correct data Developer can change and control any aspect of the data / UI / Functions.
+the system can Self build Everything and Output it to the web app or to local Bot.
+Function Editor
+UI Editor (client ui controled by the Developer. easy bootstrap can take you anywhere.)
 
 
-Bot-It - A small and open source image detector with background scan and control Support.
-this tiny unit will find anything you target it to find on any window.
-Few controller options with on the go ability to change controller.
+System will calc Everything for you. it will store the data in object and allow you to call them by name for image scans and clicks.
 
-![BotIt_Project_6O7r98H1lw](https://user-images.githubusercontent.com/52171360/97316081-09854780-1872-11eb-8c3d-4c785a7e1949.png)
+We Hope to provide Clean and Safe Frame work for automation and Deep learning.
+For Updates. Videos. Code help jump in on our Discord:
+https://discord.com/invite/ggRCXS2
 
-SDL/Unity No mouse control with auto cord system read and calc from image scanner
-PC/Emulator No mouse use for nox/bluestack other win32api units.
-MouseLikeHuman Will use pc mouse and auto curve it movement with auto random move spd and auto read cords from image scanner to the target window.
-
-![AutoHotkey_vM14bcIfyV](https://user-images.githubusercontent.com/52171360/81484415-18137000-91fa-11ea-99e1-7eaf724ec4e7.png)
-
-![AutoHotkey_lbmooVyjCH](https://user-images.githubusercontent.com/52171360/81484418-1b0e6080-91fa-11ea-9181-2e96902fd507.png)
-
-![AutoHotkey_sXWdpvy5eQ](https://user-images.githubusercontent.com/52171360/81484419-1f3a7e00-91fa-11ea-837b-df846af8db1e.png)
-
-
-
-Install:
-Botit and Botit project are Both fully portable and can run from disk on key or any folder.
-both will self deploy in the folder.
-
-BotIt Installer:
-A image crop tool with easy demo targets to show user what to snap.
-user left click of title. wiat for overlay and right drag the area he want to snap.
-Botit installer will snap the target in RGB/grayscale and will save the cords of the target to allow user area scan for it.
-it will auto save / overwrite the img to the bot img folder with the name botit use.
-so above crop like demo image show no real install is needed. only crop the stuff you  want botit to click or detect with the installer. (5 min tops! can snap while bot running to see its react correct)
-
-Bugs:
-
-window size. while moving the window or stacking few window's on each other will not be any issue
-changing the window size after cropping images will break the images you crop.
-you cant detect image you cropped on 800*600 if you resize window to 960*540....
-
-Discord:
-https://discord.gg/ggRCXS2
-
-Patreon:
-https://www.patreon.com/AutoMirror
-
-Youtube:
-https://www.youtube.com/channel/UC5OzmTUVUxZAPTRJwpwHCYg
+The App will be pushed after some limited Testing.
