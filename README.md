@@ -1,11 +1,20 @@
-Repo Update.
+First Public Test of the New Python Developer Tool.
+the Bot use Botit Cloud (autohotkey).
 
-Old Mirror and Bot Tool been Removed.
+New Raw 10 minuets show case many features and testing on live nox Client.
+https://youtu.be/OaiLduuNO6w
 
- 
-Auto-mirror Repo is now Updated and working for Android Mirror.
-https://github.com/DizzyduckAR/AutoMirror
- 
+More Data Feature list and Source Code will be provided after the Function Editor is added.
+
+This Version can do Everything you see on the Video. you can now Automate anywindow with no code and test it live.
+
+
+The Bot Place Developer Tool-win-1.0.0.zip is a 10mb updater / Data get.
+It will pull the updates from github and self deploy.
+The app is Fully portable.
+The app will self set everything no matter what PC you use.
+
+
 BotPlace Repo:
 Home for Botit Developer tool.
 Home for Botit Cloud Python version.
