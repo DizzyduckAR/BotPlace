@@ -1,0 +1,579 @@
+﻿
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" type="text/css" href="css/loading-bar.css"/>
+<script type="text/javascript" src="css/loading-bar.js"></script>
+<style>
+  body {
+	margin: 0;
+	padding: 0;
+	background: #2D2F33;
+	font-family: 'Varela Round', 'Ionicons';
+}
+.loader {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  position: relative;
+  border: 4px solid #Fff;
+  top: 0;
+  animation: loader 2s infinite ease;
+}
+
+.loader-inner {
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+  background-color: #ffb451;
+  animation: loader-inner 2s infinite ease-in;
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  
+  25% {
+    transform: rotate(180deg);
+  }
+  
+  50% {
+    transform: rotate(180deg);
+  }
+  
+  75% {
+    transform: rotate(360deg);
+  }
+  
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loader-inner {
+  0% {
+    height: 0%;
+  }
+  
+  25% {
+    height: 0%;
+  }
+  
+  50% {
+    height: 100%;
+  }
+  
+  75% {
+    height: 100%;
+  }
+  
+  100% {
+    height: 0%;
+  }
+}
+
+::selection { background: #3F8EFC; color: #fff; }
+a { text-decoration: none; }
+
+header {
+        width: 100%;
+        display: flex;
+        background: rgba(0, 0, 0, .2);
+        font-family: Segoe UI;
+        font-size: 9pt;
+        color: white;
+        
+    }
+
+.title-bar {
+	padding: 0.35em 0.5em;
+	flex-grow: 1;
+}
+
+.title-btn {
+	padding: 0.35em 1.0em;
+	cursor: pointer;
+	vertical-align: bottom;
+	font-family: Webdings;
+	font-size: 10pt;
+}
+    
+.title-btn:hover {
+	/* background: rgba(0, 0, 0, .2); */
+	background: #35dc96;
+}
+.title-btn-min:hover {
+	background: #35dc96;
+}
+.title-btn-close:hover {
+	background: #dc3545;
+}
+
+.title-btn-full:hover {
+	background: #ebd61f;
+}
+
+.title-btn-website:hover {
+	background: #14aae6;
+}
+ 
+.updateme {
+	filter: grayscale(60%);
+}
+
+ .grayme {
+      filter: grayscale(100%);
+    }
+.download {
+	position: absolute;
+	top: calc(50% - 30px);
+	right: calc(50% - 115px);
+	width: 230px;
+	height: 60px;
+	background-image: -webkit-linear-gradient(bottom, rgba(0,0,0,.075), rgba(255,255,255,.045));
+	background-image: linear-gradient(to top, rgba(0,0,0,.075), rgba(255,255,255,.045));
+    box-shadow: inset 0 -1px 0 rgba(0,0,0,.09),inset 0 1px 0 rgba(255,255,255,.04), 0 0 1px rgba(0,0,0,.3), 0 0 10px rgba(0,0,0,.1);
+	border-radius: 100px;
+	color: rgba(255,255,255,.9);
+	line-height: 60px;
+	text-align: center;
+	letter-spacing: 5px;
+	overflow: hidden;
+	transition: all .3s cubic-bezier(.67,.13,.1,.81), transform .15s cubic-bezier(.67,.13,.1,.81);
+}
+.download:hover {
+	right: calc(50% - 200px);
+	width: 400px;
+}
+.download:active {
+	transform: translateY(3px);
+}
+.download:before, .download:after {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	opacity: 1;
+	transition: all .3s cubic-bezier(.67,.13,.1,.81);
+}
+.download:before {
+	content: 'Download Detected';
+}
+.download:after {
+	content: 'Pick & Click to Download/Update';
+	top: -60px;
+	opacity: 0;
+}
+.download:hover:after {
+	top: 0px;
+	opacity: 1;
+}
+.download:hover:before {
+	top: 60px;
+	opacity: 0;
+}
+
+.platforms {
+
+	position: absolute;
+	top: 50px;
+	left: 40px;
+	height: 400px;
+	width: 580px;
+	transition: all .3s cubic-bezier(.67,.13,.1,.81);
+	background: #303236;
+	border-radius: 20px;
+	transform: scale(.9);
+	opacity: 1;
+	overflow: hidden;
+
+}
+.platforms:target {
+	visibility: visible;
+	transform: scale(1);
+	opacity: 1;
+}
+.platforms a {
+	position: absolute;
+	top: 200px;
+	left: 10px;
+	width: 180px;
+	height: 180px;
+	border-radius: 10px;
+	color: #E5F4FF;
+	text-transform: uppercase;
+	transition: top .5s cubic-bezier(.67,.13,.1,.81);
+}
+.platforms a:nth-child(1) {
+	transition-delay: .1s;
+}
+.platforms a:nth-child(2) {
+	left: 200px;
+}
+.platforms a:nth-child(3) {
+	left: 390px;
+	transition-delay: .1s;
+}
+.platforms a:nth-child(4) {
+  margin-top: 200px;
+
+	transition-delay: .1s;
+}
+.platforms:target a {
+	top: 10px;
+}
+.platforms a:hover {
+	box-shadow: 0 0 0 1px #E5F4FF;
+}
+.platforms a:before {
+	content: attr(data-os);
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+}
+.platforms a:after {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 120px;
+	line-height: 140px;
+	text-align: center;
+	font-size: 300%;
+	transform: scale(1.25);
+	transform-origin: center center;
+}
+
+.platforms a:nth-child(1):after {
+	content: '\f247';
+}
+.platforms a:nth-child(2):after {
+	content: '\f227';
+}
+.platforms a:nth-child(3):after {
+	content: '\f2c5';
+}
+.platforms a:nth-child(4):after {
+	content: '\f2c5';
+}
+
+.installer {
+	position: fixed;
+	top: calc(50% - 150px);
+	left: calc(50% - 300px);
+	width: 600px;
+	height: 300px;
+	background: #303236;
+	border-radius: 20px;
+	visibility: hidden;
+	transform: scale(.9);
+	opacity: 0;
+	transition: all .1s cubic-bezier(.67,.13,.1,.81);
+}
+.installer:target {
+	visibility: visible;
+	transform: scale(1);
+	opacity: 1;
+}
+.installer a.back {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	width: 38px;
+	height: 38px;
+	line-height: 38px;
+	text-align: center;
+	font-size: 200%;
+	color: #bbb;
+}
+.installer a.back:before {
+	content: '\f129';
+}
+.installer a.back:after {
+	content: 'Back';
+	position: absolute;
+	top: 7px;
+	left: 30px;
+	height: 20;
+	line-height: 20px;
+	font-size: 40%;
+	text-align: center;
+	color: #cacaca;
+	border-radius: 5px;
+	pointer-events: none;
+	opacity: 0;
+	transition: all .1s cubic-bezier(.67,.13,.1,.81);
+}
+.installer a.back:hover:after {
+	left: 38px;
+	opacity: 1;
+}
+.installer a.close {
+	position: absolute;
+	top: 40px;
+	right: 40px;
+	font-size: 200%;
+	color: #bbb;
+}
+.installer a.close:before {
+	content: 'X';
+}
+.installer a.close:after {
+	content: 'Close';
+	position: absolute;
+	top: 7px;
+	right: 30px;
+	height: 20px;
+	line-height: 20px;
+	font-size: 40%;
+	text-align: center;
+	color: #cacaca;
+	border-radius: 5px;
+	pointer-events: none;
+	opacity: 0;
+	transition: all .1s cubic-bezier(.67,.13,.1,.81);
+}
+.installer a.close:hover:after {
+	right: 38px;
+	opacity: 1;
+}
+
+.installer .info {
+	position: absolute;
+	top: 40px;
+	left: 15px;
+	height: calc(100% - 80px);
+	width: 200px;
+}
+.installer .info:before {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 180px;
+	height: 220px;
+	line-height: 220px;
+	text-align: center;
+	font-size: 1000%;
+	color: #3F8EFC;
+}
+.installer .info:after {
+	content: attr(data-weight);
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 180px;
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+	font-size: 100%;
+	font-weight: bolder;
+	letter-spacing: 2px;
+	color: #aaa;
+}
+.installer#windows .info:before {
+	content:  url(botit.png);
+  
+}
+.installer#developer .info:before {
+	content:  url(Developertool.png);
+}
+.installer#automirror .info:before {
+	content:  url(automirror.png);
+}
+
+.installer .details {
+	position: absolute;
+	top: 40px;
+	right: 40px;
+	height: 180px;
+	width: calc(100% - 280px);
+	padding: 10px;
+}
+.installer .details p {
+	margin: 0px;
+  padding-left: 30px;
+  padding-bottom: 10px;
+	font-weight: bolder;
+	font-size: 120%;
+	color: #cacaca;
+}
+.installer .details span {
+	padding-left: 30px;
+
+  color: #cacaca;
+}
+.installer .details ul {
+	padding-left: 30px;
+	list-style: none;
+	color: #888;
+  
+
+}
+.installer .details ul li {
+	margin-left: 0px !important;
+	margin-bottom: 8px;
+	opacity: 0;
+	transition: all .3s cubic-bezier(.67,.13,.1,.81);
+}
+.installer .details ul li:before {
+	content: '';
+	margin-right: 0;
+}
+.installer:target .details ul li {
+	margin-left: 10px;
+	opacity: 1;
+}
+.installer:target .details ul li:nth-child(1) {
+	transition-delay: .1s;
+}
+.installer:target .details ul li:nth-child(2) {
+	transition-delay: .2s;
+}
+.installer:target .details ul li:nth-child(3) {
+	transition-delay: .3s;
+}
+.installer:target .details ul li:nth-child(4) {
+	transition-delay: .4s;
+}
+
+.installer label {
+	position: absolute;
+	bottom: 20px;
+	right: 90px;
+	height: 40px;
+	width: calc(100% - 320px);
+	border-radius: 5px;
+	overflow: hidden;
+	cursor: pointer;
+}
+.installer label input {
+	display: none;
+}
+.installer label span {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	line-height: 40px;
+	text-align: center;
+	color: #fff;
+	background: #3f2193;
+}
+.installer label input:checked ~ span {
+	background: #fd3783;
+	animation: downloadSuccess 3.1s ease;
+}
+.installer label span:after {
+	content: 'DOWNLOAD';
+	position: absolute;
+	width: 80%;
+	height: 100%;
+	top: 0px;
+	left: 10%;
+}
+.installer label input:checked ~ span:after {
+	content: 'Thank you for download!';
+	animation: downloadState 3s;
+}
+.installer label span:before {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	opacity: 0;
+	background: rgba(255,255,255,.2);
+}
+.installer label input:checked ~ span:before {
+	animation: downloadProgress 3s cubic-bezier(.67,.13,.1,.81);
+}
+
+@keyframes downloadSuccess {
+	0%, 90% {
+		background: #3f2193;
+	}
+	100% {
+		background: #fd3783;
+	}
+}
+
+@keyframes downloadState {
+	0%, 95% {
+		content: 'DOWNLOADING...'
+	}
+	100% {
+		content: 'Thank you for download!'
+	}
+}
+.textstat
+{
+  position: absolute;
+  top: 5px;
+	left: 51%;
+  
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+@keyframes downloadProgress {
+	0% {
+		width: 5%;
+		opacity: 1;
+	}
+	35% {
+		width: 17%;
+	}
+	64% {
+		width: 51%;
+	}
+	81% {
+		width: 70%;
+	}
+	90% {
+		width: 86%;
+		opacity: 1;
+	}
+	100% {
+		width: 100%;
+		opacity: 0;
+	}
+}
+</style>
+<header>
+  <span class="title-bar pywebview-drag-region" id="titlebar123" >Bot Place Platform</span>
+  <span class="title-bar pywebview-drag-region" id="loadstat"><span class="loader"><span class="loader-inner"></span></span></span>
+  <span class="title-btn title-btn-website" onclick="pywebview.api.bottbar('website')" ><img title="Bot Place Site"  src="icon.png" height="20" width="20"></span>
+  <span class="title-btn" onclick="pywebview.api.topbar('mini')" >0</span>
+  <!-- <span class="title-btn title-btn-full mt-1" onclick="pywebview.api.topbar('full')">1</span> -->
+  <span class="title-btn title-btn-close mb-1" onclick="pywebview.api.topbar('close')" >r</span>
+</header>
+<body>
+  
+  <!-- <a class="download"  href="#platforms"></a> -->
+<div class="platforms" id="platforms">
+	fghg
+</div>
+
+<div id="appdits">
+
+
+</div>
+
+
+
+</body>
+</html>
+
