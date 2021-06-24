@@ -17,7 +17,7 @@ Added Source Code Folder to Hold all apps Sources
 **Download
 https://github.com/DizzyduckAR/BotPlace/raw/master/Bot%20Place%20Developer%20Tool-win-1.0.0.zip
 
-*/*/*/*/*/*/*/*/*/*/**/*/*/*/*
+
 First Public Test of the New Python Developer Tool.
 the Bot use Botit Cloud (autohotkey).
 
