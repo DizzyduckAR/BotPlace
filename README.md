@@ -1,14 +1,23 @@
 24/06/21
+
 Added New App "BotPlace Hub"
+
 allow Download/Updates of our apps in a click.
+
 fully portable 10mb.
+
 Self Updater from github.
+
 Hub Will grayscale the app image if app is missing.
+
 on update 50% color to image
+
 on check ok it will color the app image fully and allow start.
 
 
+
 Added Source code for the Hub.
+
 Added Source Code Folder to Hold all apps Sources
 
 ![BotPlace_Hub_srXZeO2r2e](https://user-images.githubusercontent.com/52171360/123235235-8663d200-d490-11eb-8581-3b34a7aa58df.png)
