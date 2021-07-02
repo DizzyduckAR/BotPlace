@@ -1,4 +1,21 @@
-24/06/21
+27/06/21
+
+Developer Tool 1.0.4:
+
+Fixed updater <br>
+Fixed Root folder <br>
+App will now Self detect if Developer open it from the Hub or from the EXE and build root by it. <br>
+
+Added window Resize <br>
+Small fixes<br>
+Added "on top" Ui will be with On top command for 3 secs from the first show. then it will self deactivate the on top command.<br>
+Added New app icon to be in line with the Hub<br>
+
+
+Both Update Hub and Github hold the new updates
+
+
+24/06/21<br>
 
 Added New App "BotPlace Hub"
 
