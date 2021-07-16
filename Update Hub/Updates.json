@@ -1,0 +1,16 @@
+{
+    "Apps": [
+      {
+        "BotitCloud": "1.0.3",
+        "Developertool": "1.0.6",
+        "AutoMirror": "1.0.1"
+      }
+    ],
+    "links": [
+      {
+        "BotitCloud": "https://github.com/DizzyduckAR/BotPlace/raw/master/Update%20Hub/Botit%20Cloud/Botit%20Cloud%20Public.zip",
+        "Developertool": "https://github.com/DizzyduckAR/BotPlace/raw/master/Update%20Hub/Bot%20Place%20Developer%20Tool/Bot%20Place%20Developer%20Tool.zip",
+        "AutoMirror": "https://github.com/DizzyduckAR/BotPlace/raw/master/Update%20Hub/Auto%20Mirror/Auto%20Mirror.zip"
+      }
+    ]
+  }
