@@ -1,3 +1,26 @@
+16/07/21
+Developer Tool 1.0.6:<br>
+
+New Developer Api's<br>
+Renew Web App Data Get. Isolated each Bot Request.<br>
+<br>
+Function Editor implanted.<br>
+Developer can Now fully Build Auto code for his object and add them to functions.<br>
+System Will Self Detect Everything and Build your Connected object to the DB.<br>
+
+<br>
+Bot Updated. Allow Change Controller (Click types) to Support Any Window Botting.<br>
+Bot Can now Get and Build Developer function. testing your function can be done in a click now.
+
+New home:<br>
+![Bot_Place_Developer_Tool_iK6eU4Kilt](https://user-images.githubusercontent.com/52171360/125932391-0dfe8c0d-4fd1-49ab-93b7-85e13b3d4c09.png)
+
+<br>
+
+Function Editor:<br>
+![Bot_Place_Developer_Tool_fiigntcHxZ](https://user-images.githubusercontent.com/52171360/125932396-2568a1de-fb2c-4694-814b-56f2dfa18b3c.png)
+
+
 27/06/21
 
 Developer Tool 1.0.4:
