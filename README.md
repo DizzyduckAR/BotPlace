@@ -1,6 +1,6 @@
 16/07/21
 Developer Tool 1.0.6:<br>
-
+(System is Free and a Test Account is already inside. Anyone can test and Build Stuff No Code Needed)
 New Developer Api's<br>
 Renew Web App Data Get. Isolated each Bot Request.<br>
 <br>
