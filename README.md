@@ -1,3 +1,27 @@
+14/08/21<br>
+*PyUpdater Was Removed until they fix the Security msg with Microsoft. No Self Update Atm.<br>
+
+Added:<br>
+New landing Home (missing some data. will help Guide Users)<br>
+New Data get Class to handle most of the data get/set on Threads<br>
+New Init Path. App will now first init the window and then start loading Elements to it.<br>
+Home Button now Reset UI correct.<br>
+Added Warning to Load Bot and Push To WebApp<br>
+
+New Function Type "UIFunc" Allow Developer Control Elements in the Bot UI. get data set data and more.<br>
+The new function let Developer Add his own drop down menus Data when the bot load or if action on the app accord. <br>
+
+Developer Data Push:<br>
+Added Push to web app.<br>
+system will auto detect and build all the data into the web app.<br>
+Developer can run local changes to his Online bots and simply save everything in one Click.<br>
+Demo user cant Push Data..<br>
+
+Window Capture and Window Resize Changes:<br>
+*Python will now call ahk to get the target window and handle the Resize.<br>
+
+![BotPlace_Developer_Tool_qqLXXqK4xR](https://user-images.githubusercontent.com/52171360/129449241-141a040b-41dc-4322-a463-660d3d048db7.png)
+
 16/07/21
 Developer Tool 1.0.6:<br>
 (System is Free and a Test Account is already inside. Anyone can test and Build Stuff No Code Needed)
