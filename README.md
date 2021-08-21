@@ -5,6 +5,8 @@ Fix Data get for 3rd bot and above.<br>
 Corrected Few Elements and Card Sizes.<br>
 Update Pywebview 3.5<br>
 Corrected Screen Size (wideview only atm.)<br>
+![BotPlace_Developer_Tool_v73L7C92hU](https://user-images.githubusercontent.com/52171360/130320188-78354131-c9a2-4077-a4d9-6630b74bfefb.png)
+
 
 BotPlace Client 1.0.1:<br>
 Added UIFunc<br>
@@ -12,6 +14,7 @@ Added New Data Get and order for the New Function Type<br>
 Added User Modal (still not hooked. only UI.)<br>
 Data get per Game is Much faster now. around 0.3secs (was 0.8)<br>
 Removed pyupdater<br>
+![BotPlace_Client_iWnbidEquD](https://user-images.githubusercontent.com/52171360/130320191-b3bb1b25-726a-4664-a1ab-024236a19fc7.png)
 
 
 
