@@ -1,3 +1,20 @@
+21/08/21<br>
+BotPlace Developer Tool v1.0.72:<br>
+
+Fix Data get for 3rd bot and above.<br>
+Corrected Few Elements and Card Sizes.<br>
+Update Pywebview 3.5<br>
+Corrected Screen Size (wideview only atm.)<br>
+
+BotPlace Client 1.0.1:<br>
+Added UIFunc<br>
+Added New Data Get and order for the New Function Type<br>
+Added User Modal (still not hooked. only UI.)<br>
+Data get per Game is Much faster now. around 0.3secs (was 0.8)<br>
+Removed pyupdater<br>
+
+
+
 14/08/21<br>
 *PyUpdater Was Removed until they fix the Security msg with Microsoft. No Self Update Atm.<br>
 
