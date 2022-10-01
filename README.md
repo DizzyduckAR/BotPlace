@@ -19,9 +19,19 @@ it will then write data on the webapp data results (like download / update / sta
 <br>
 the Hub is Uncompiled! it runs as a raw python file from apps/hub/<br>
 you can view. edit. change with any code editor and run again to apply any change.<br>
-
-
-
+<br><br>
+Updater
+<br>
+![BotPlace_App_Hub_a2QI9i4W3N](https://user-images.githubusercontent.com/52171360/193425678-bc892e4b-d43f-4b8f-b095-1160d1946a68.png)
+<br>
+<br><br>
+News Welcome Window
+<br>
+![BotPlace_App_Hub_FAjBgX9cgx](https://user-images.githubusercontent.com/52171360/193425672-0185f81e-a735-4d63-a5d8-c9a98a6abf34.png)
+<br><br>
+App Window
+<br>
+![BotPlace_App_Hub_HilctCUMyv](https://user-images.githubusercontent.com/52171360/193425676-9cf1593c-d15a-46fc-9346-a446838dcc11.png)
 <br><br><br><br><br><br><br> 
 
 21/08/21<br>
