@@ -6,9 +6,9 @@ For the init stage the app comes with all the packages pre-installed. we already
 but its not connected yet to see first how raw python apps runs on pre compiled env with adaptive site-packages.<br>
 <br>
 <br>
-app is very simple and allow user to get updates directly from the webapp withut client update.<br>
-it will self check and build AHK from github to allow .py | .ahk | .exe portable download and running.<br>
-Raw apps like Botit DIY use the env of the Compiled EXE. it built to be empty and detect a .py arg on the call<br>
+app is very simple and allows user to get updates directly from the webapp without client updates.<br>
+it will self-check and build AHK from github to allow .py | .ahk | .exe portable download and running.<br>
+Raw apps like Botit DIY use the env of the Compiled EXE. it is built to be empty and detect a .py arg on the call<br>
 it will then redirect the app to the new python script while skipping the Hub app.<br>
 Live news system also supported by django. HTMX running the magic with the local calls.<br>
 alpine cover most of the UI functions. the app use emulated browser temp storage to remember your settings.<br>
