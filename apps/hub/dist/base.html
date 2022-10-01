@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+<html lang="en" class="is-scrollbar-hidden" >
+
+  <head>
+    <!-- Meta tags  -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+
+    <title>BotPlace Preloader</title>
+    <link rel="icon" type="image/png" href="appsui/images/favicon.png" />
+
+    <!-- CSS Assets -->
+    <link rel="stylesheet" href="appsui/css/app.css" />
+
+    <!-- Javascript Assets -->
+    <script src="appsui/js/app.js" defer></script>
+
+    <!-- htmx -->
+    <script src="appsui/js/htmx-1.8.0.min.js" defer></script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <style>
+    .isclick:hover {
+      cursor: pointer;
+  }
+  </style>
+  
+      <!-- top header Util Frame -->
+      <div
+      x-data="usePopper({placement:'top',offset:12})"
+      @click.outside="if(isShowPopper) isShowPopper = false"
+      class="sticky z-50 top-0 pywebview-drag-region pywebview-resize bg-slate-50 dark:bg-navy-900 p-1"
+    >
+  
+      <div class="flex justify-start fixed left-0 z-50 p-1">
+        <i class="self-start" id="toptitle"></i>  
+      </div>
+      
+        <div class="flex justify-end">
+           
+        <!-- Dark Mode Toggle -->
+        <button
+            x-tooltip.placement.right="'Light/Dark Mode'"
+            @click="$store.global.isDarkModeEnabled = !$store.global.isDarkModeEnabled"
+            class="btn h-8 w-8 rounded-full p-0 hover:bg-slate-300/20 focus:bg-slate-300/20 active:bg-slate-300/25 dark:hover:bg-navy-300/20 dark:focus:bg-navy-300/20 dark:active:bg-navy-300/25"
+          >
+            <svg
+              x-show="$store.global.isDarkModeEnabled"
+              x-transition:enter="transition-transform duration-200 ease-out absolute origin-top"
+              x-transition:enter-start="scale-75"
+              x-transition:enter-end="scale-100 static"
+              class="h-6 w-6 text-amber-400"
+              fill="currentColor"
+              viewbox="0 0 24 24"
+            >
+              <path
+                d="M11.75 3.412a.818.818 0 01-.07.917 6.332 6.332 0 00-1.4 3.971c0 3.564 2.98 6.494 6.706 6.494a6.86 6.86 0 002.856-.617.818.818 0 011.1 1.047C19.593 18.614 16.218 21 12.283 21 7.18 21 3 16.973 3 11.956c0-4.563 3.46-8.31 7.925-8.948a.818.818 0 01.826.404z"
+              />
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              x-show="!$store.global.isDarkModeEnabled"
+              x-transition:enter="transition-transform duration-200 ease-out absolute origin-top"
+              x-transition:enter-start="scale-75"
+              x-transition:enter-end="scale-100 static"
+              class="h-6 w-6 text-amber-400"
+              viewbox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </button>
+  
+          <button x-tooltip.placement.right="'Minimize'" class="btn btn-square hover:bg-slate-300/20 focus:bg-slate-300/20 active:bg-slate-300/25 btn-outline" onclick="pywebview.api.topbar('mini')">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M20 12H4" />
+              </svg>
+          </button>
+  
+          <button x-tooltip.placement.right="'Full Screen'" class="btn  btn-square hover:bg-slate-300/20 focus:bg-slate-300/20 active:bg-slate-300/25 btn-outline"  onclick="pywebview.api.topbar('full')">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+          </button>
+          
+          <button x-tooltip.placement.right="'Exit'" class="btn btn-square hover:bg-slate-300/20 focus:bg-slate-300/20 active:bg-slate-300/25 btn-outline"  onclick="pywebview.api.topbar('close')">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+          </button>
+        </div>
+      </div>
+
+    <!-- App preloader-->
+    <body
+      x-data="{showModal:false}"
+      x-bind="$store.global.documentBody"
+      class=" is-header-blur"
+      >
+      <!-- App preloader-->
+      <div
+        class="app-preloader fixed z-50 grid h-full w-full place-content-center bg-slate-50 dark:bg-navy-900"
+      >
+        <div class="app-preloader-inner relative inline-block h-48 w-48"></div>
+      </div>
+
+      <div id="mainblocker">
+        <div class="flex justify-center ">
+          <!-- <script src="js/lottie-player.js"></script> -->
+          <script src="appsui/js/lottie-player.js"></script>
+          <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_sf1bpcsj.json" class="flex items-stretch w-32 md:w-48 lg:w-64"  background="transparent"  speed="1"    loop autoplay></lottie-player>
+          
+        </div>
+    
+       
+       
+          <div class="text-center gap-2 justify-center flex items-stretch py-2 pt-5" id="updatetext">
+            <i>Checking</i>
+            <i class="fa-brands fa-github"></i>
+            <!-- <i class="fa-solid fa-dragon"></i> -->
+            <i>For Client Update</i>
+          </div>
+         
+          <div class="px-8  pt-5 ">
+            <div class="progress h-5 bg-slate-150 dark:bg-navy-500 ">
+              <div
+                class="is-active   overflow-hidden rounded-full bg-secondary " id="updatestatus" style="width: 0%"
+              ></div>
+            </div>
+          </div>
+         
+          <!-- bottom -->
+          <div  class=""> 
+            <div class="flex justify-start fixed left-0 z-50 bottom-0 p-1">
+              <i class="self-start">Bot Place</i>  
+            </div>
+    
+            <div class="flex gap-2 justify-end fixed right-0 z-50 bottom-0 p-1">
+              <i class="fa-solid fa-jedi isclick" title="Webapp Link"></i>
+              <i onmousedown="pywebview.api.bottbar('website')" title="Youtube Channel" class="fab fa-youtube isclick"></i>
+              <i onmousedown="pywebview.api.bottbar('discord')" title="Discord Channel" class="fab fa-discord isclick"></i>
+              <i class="fa-brands fa-github isclick" title="Github Repo"></i>  
+            </div>
+            
+            
+    
+          </div>
+       
+      
+      </div>
+
+    </body>
+    
+    <script>
+      window.addEventListener("DOMContentLoaded", () => Alpine.start());
+    </script>
+
+</html>
+
+
+
