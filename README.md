@@ -1,3 +1,29 @@
+01/10/2022<br>
+BotPlace Hub:<br>
+A new app built on pywebview and Django.<br>
+the app serve as a multi shell to run the Hub itself and Raw python apps that the Hub allow to download.<br>
+For the init stage the app comes with all the packages pre-installed. we already built and tested "local pip" with our system<br>
+but its not connected yet to see first how raw python apps runs on pre compiled env with adaptive site-packages.<br>
+<br>
+<br>
+app is very simple and allow user to get updates directly from the webapp withut client update.<br>
+it will self check and build AHK from github to allow .py | .ahk | .exe portable download and running.<br>
+Raw apps like Botit DIY use the env of the Compiled EXE. it built to be empty and detect a .py arg on the call<br>
+it will then redirect the app to the new python script while skipping the Hub app.<br>
+Live news system also supported by django. HTMX running the magic with the local calls.<br>
+alpine cover most of the UI functions. the app use emulated browser temp storage to remember your settings.<br>
+<br>
+<br>
+while first Init and "Update" UI comes from local the main app is a remote URL load to the botit webapp.<br>
+it will then write data on the webapp data results (like download / update / start) or the blinking dot on new apps.<br>
+<br>
+the Hub is Uncompiled! it runs as a raw python file from apps/hub/<br>
+you can view. edit. change with any code editor and run again to apply any change.<br>
+
+
+
+<br><br><br><br><br><br><br> 
+
 21/08/21<br>
 BotPlace Developer Tool v1.0.72:<br>
 
