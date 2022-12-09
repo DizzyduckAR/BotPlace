@@ -1,7 +1,7 @@
 altgraph==0.17.2
 appdirs==1.4.4
 bsdiff4==1.2.2
-certifi==2022.6.15
+certifi==2022.12.7
 cffi==1.15.0
 chardet==5.0.0
 charset-normalizer==2.1.0
