@@ -1,23 +1,29 @@
+15/06/2023<br>
+New PyWebView Frame will be pushed on all app's UI
+the new Frame will be settled in a New git. (for isolation purposes)
+
+
+
 01/10/2022<br>
 BotPlace Hub:<br>
 A new app built on pywebview and Django.<br>
-the app serve as a multi shell to run the Hub itself and Raw python apps that the Hub allow to download.<br>
-For the init stage the app comes with all the packages pre-installed. we already built and tested "local pip" with our system<br>
-but its not connected yet to see first how raw python apps runs on pre compiled env with adaptive site-packages.<br>
+the app serves as a multi-shell to run the Hub itself and Raw Python apps that the Hub allows downloading.<br>
+For the init stage, the app comes with all the packages pre-installed. we already built and tested "local pip" with our system<br>
+but it's not connected yet to see first how raw Python apps run on pre-compiled env with adaptive site-packages.<br>
 <br>
 <br>
-app is very simple and allows user to get updates directly from the webapp without client updates.<br>
-it will self-check and build AHK from github to allow .py | .ahk | .exe portable download and running.<br>
+app is very simple and allows user to get updates directly from the web app without client updates.<br>
+it will self-check and build AHK from Git Hub to allow .py | .ahk | .exe portable download and running.<br>
 Raw apps like Botit DIY use the env of the Compiled EXE. it is built to be empty and detect a .py arg on the call<br>
-it will then redirect the app to the new python script while skipping the Hub app.<br>
-Live news system also supported by django. HTMX running the magic with the local calls.<br>
-alpine cover most of the UI functions. the app use emulated browser temp storage to remember your settings.<br>
+it will then redirect the app to the new Python script while skipping the Hub app.<br>
+The live news system is also supported by Django. HTMX running the magic with the local calls.<br>
+alpine covers most of the UI functions. the app use emulated browser temp storage to remember your settings.<br>
 <br>
 <br>
-while first Init and "Update" UI comes from local the main app is a remote URL load to the botit webapp.<br>
-it will then write data on the webapp data results (like download / update / start) or the blinking dot on new apps.<br>
+while the first Init and "Update" UI comes from local the main app is a remote URL load to the botit web app.<br>
+it will then write data on the web app data results (like download/update / start) or the blinking dot on new apps.<br>
 <br>
-the Hub is Uncompiled! it runs as a raw python file from apps/hub/<br>
+the Hub is Uncompiled! it runs as a raw Python file from apps/hub/<br>
 you can view. edit. change with any code editor and run again to apply any change.<br>
 <br><br>
 Updater
@@ -60,16 +66,16 @@ Removed pyupdater<br>
 Added:<br>
 New landing Home (missing some data. will help Guide Users)<br>
 New Data get Class to handle most of the data get/set on Threads<br>
-New Init Path. App will now first init the window and then start loading Elements to it.<br>
-Home Button now Reset UI correct.<br>
+New Init Path. The app will now first init the window and then start loading Elements to it.<br>
+Home Button now Reset UI correctly.<br>
 Added Warning to Load Bot and Push To WebApp<br>
 
-New Function Type "UIFunc" Allow Developer Control Elements in the Bot UI. get data set data and more.<br>
-The new function let Developer Add his own drop down menus Data when the bot load or if action on the app accord. <br>
+The new Function Type "UIFunc" Allow Developer Control Elements in the Bot UI. get data set data and more.<br>
+The new function lets Developer Add his own drop-down menus Data when the bot load or if action on the app accord. <br>
 
 Developer Data Push:<br>
 Added Push to web app.<br>
-system will auto detect and build all the data into the web app.<br>
+system will auto-detect and build all the data into the web app.<br>
 Developer can run local changes to his Online bots and simply save everything in one Click.<br>
 Demo user cant Push Data..<br>
 
@@ -81,16 +87,16 @@ Window Capture and Window Resize Changes:<br>
 16/07/21
 Developer Tool 1.0.6:<br>
 (System is Free and a Test Account is already inside. Anyone can test and Build Stuff No Code Needed)
-New Developer Api's<br>
+New Developer API's<br>
 Renew Web App Data Get. Isolated each Bot Request.<br>
 <br>
 Function Editor implanted.<br>
 Developer can Now fully Build Auto code for his object and add them to functions.<br>
-System Will Self Detect Everything and Build your Connected object to the DB.<br>
+The system Will Self Detect Everything and Build your Connected object to the DB.<br>
 
 <br>
 Bot Updated. Allow Change Controller (Click types) to Support Any Window Botting.<br>
-Bot Can now Get and Build Developer function. testing your function can be done in a click now.
+Bot Can now Get and Build the Developer function. testing your function can be done in a click now.
 
 New home:<br>
 ![Bot_Place_Developer_Tool_iK6eU4Kilt](https://user-images.githubusercontent.com/52171360/125932391-0dfe8c0d-4fd1-49ab-93b7-85e13b3d4c09.png)
