@@ -1,6 +1,17 @@
 15/06/2023<br>
-New PyWebView Frame will be pushed on all app's UI
-the new Frame will be settled in a New git. (for isolation purposes)
+New PyWebView Frame will be pushed on all app's UI<br>
+the new Frame will be settled in a New git. (for isolation purposes)<br>
+<br>
+<br>
+![chrome_mZ18EFzxpe](https://github.com/DizzyduckAR/BotPlace/assets/52171360/7b0e7098-6da9-4f5b-8ef1-31724e0e0ec4)
+<br>
+<br>
+![chrome_vLFG0yyhkz](https://github.com/DizzyduckAR/BotPlace/assets/52171360/4ebaa8bc-91ff-466b-831d-7916f9a7a4c3)
+
+<br>
+
+
+
 
 
 
