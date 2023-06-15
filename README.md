@@ -3,10 +3,10 @@ New PyWebView Frame will be pushed on all app's UI<br>
 the new Frame will be settled in a New git. (for isolation purposes)<br>
 <br>
 <br>
-![chrome_E6vvs5GCiE](https://github.com/DizzyduckAR/BotPlace/assets/52171360/292234a2-d266-4ba6-a4b9-1936ecd4c5b7)
+![chrome_51JBuBMJtK](https://github.com/DizzyduckAR/BotPlace/assets/52171360/9e2d7a53-9177-4bb9-9b67-88328b29d849)
 <br>
 <br>
-![chrome_DXpNuEFxYn](https://github.com/DizzyduckAR/BotPlace/assets/52171360/7db35374-41d5-4a38-a655-3819a0aad961)
+![chrome_ofdZvzHD1H](https://github.com/DizzyduckAR/BotPlace/assets/52171360/6d9a8518-48a6-44b6-84d7-451e153c0d62)
 <br>
 
 
