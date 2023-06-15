@@ -30,20 +30,19 @@ try:
 
 except:
     print('import error')
-# from urllib.request import urlretrieve
 try:
     import subprocess
 except:
     print('import error1')
 try:
-#pyupdater
+    #pyupdater 
     from pyupdater.client import Client
     from urllib.request import Request
 except:
     print('import error2')
 
 
-
+#Dual load file. if no script name was sent it will run /apps/hub/hub.py else it will run the python file sent. (this allow the hub to run open source Raw python files while using the same ENV)
 if len(sys.argv) > 1:
     spec = util.spec_from_file_location('', os.getcwd()+'/apps/'+sys.argv[1]+'/'+sys.argv[1]+'.py')
     module = util.module_from_spec(spec)
